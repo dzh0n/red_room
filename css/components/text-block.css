@@ -1,0 +1,31 @@
+/* Text block — desktop 738:9220 / mobile 800:15572 */
+
+.text-block__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1252px;
+}
+
+/* Desktop: Mulish SemiBold 18 / 140%, #615858 */
+.text-block__text {
+  color: var(--color-neutral-500);
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Laptop: average of desktop 18 / mobile 16 */
+@media (max-width: 1439px) {
+  .text-block__text {
+    font-size: 17px;
+  }
+}
+
+/* Mobile 375 — 800:15572: Mulish SemiBold 16 / 140% */
+@media (max-width: 767px) {
+  .text-block__text {
+    font-size: 16px;
+  }
+}

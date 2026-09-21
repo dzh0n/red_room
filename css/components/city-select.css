@@ -1,0 +1,187 @@
+/* City select — desktop 338:2937 / mobile 853:12819 */
+
+.city-select > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.city-select__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.city-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  padding: 16px 24px 24px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-100);
+  box-shadow: none;
+  transition: box-shadow 0.2s ease;
+}
+
+/* Hover: white 20% overlay + shadow (desktop city hover / СПб) */
+.city-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.city-card__top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 32px;
+}
+
+.city-card__name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  color: var(--color-neutral-950);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.city-card__pin {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.city-card__arrow {
+  position: relative;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.city-card__arrow img {
+  position: absolute;
+  inset: 0;
+  width: 32px;
+  height: 32px;
+  transition: opacity 0.2s ease;
+}
+
+.city-card__arrow-hover {
+  opacity: 0;
+}
+
+.city-card__meta {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 46px;
+  color: var(--color-neutral-400);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.city-card__meta span {
+  white-space: nowrap;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .city-card:hover::before,
+  .city-card:focus-visible::before {
+    opacity: 1;
+  }
+
+  .city-card:hover,
+  .city-card:focus-visible {
+    box-shadow: var(--shadow-card);
+    outline: none;
+  }
+
+  .city-card:hover .city-card__arrow-default,
+  .city-card:focus-visible .city-card__arrow-default {
+    opacity: 0;
+  }
+
+  .city-card:hover .city-card__arrow-hover,
+  .city-card:focus-visible .city-card__arrow-hover {
+    opacity: 1;
+  }
+}
+
+.city-card:focus-visible {
+  outline: 2px solid var(--color-primary-350);
+  outline-offset: 2px;
+}
+
+/* Laptop: average spacing; keep 4 columns (pad is tighter) */
+@media (max-width: 1439px) {
+  .city-select > .container {
+    gap: 25px;
+  }
+
+  .city-select__list {
+    gap: 20px;
+  }
+
+  .city-card {
+    gap: 12px;
+    padding: 14px 20px 20px;
+  }
+
+  .city-card__name {
+    gap: 10px;
+  }
+
+  .city-card__meta {
+    font-size: 17px;
+    gap: 8px 24px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .city-select__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile 375 — 853:12819 */
+@media (max-width: 767px) {
+  .city-select > .container {
+    gap: 16px;
+  }
+
+  .city-select__list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .city-card {
+    gap: 8px;
+    padding: 12px 16px 16px;
+  }
+
+  .city-card__name {
+    gap: 8px;
+  }
+
+  .city-card__meta {
+    gap: 46px;
+    font-size: 16px;
+  }
+}

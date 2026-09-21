@@ -1,0 +1,274 @@
+/* FAQ — desktop header 738:9199 / list 338:2917 / mobile 800:15576
+ * Font sizes: exact Figma (desktop until 767, then mobile). No laptop averages.
+ */
+
+.faq > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.faq__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 248px;
+}
+
+.faq__intro {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 824px;
+  min-width: 0;
+}
+
+/* Desktop: Mulish SemiBold 18 / 140% */
+.faq__desc {
+  color: var(--color-neutral-500); /* #615858 */
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.faq__actions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Desktop: H 64, Mulish SemiBold 20 / 140%, outline #0a0909 */
+.faq__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-sizing: border-box;
+  height: 64px;
+  padding: 0 32px;
+  border: 1px solid var(--color-neutral-950);
+  border-radius: var(--radius-button);
+  background: transparent;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.faq__btn img {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .faq__btn:hover {
+    background-color: var(--color-neutral-950);
+    color: var(--color-neutral-0);
+  }
+
+  .faq__btn:hover img {
+    filter: invert(1);
+  }
+}
+
+.faq__btn:focus-visible {
+  outline: 2px solid var(--color-primary-350);
+  outline-offset: 2px;
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Open: pad 24 + gap 14; closed: pad 24 → H 82 */
+.faq-item {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: var(--color-primary-70); /* #eadcdc */
+}
+
+.faq-item__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Desktop: Mulish SemiBold 24 / 140% */
+.faq-item__question {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--font-sans);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.faq-item__icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.faq-item__icon img {
+  position: absolute;
+  inset: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.faq-item__icon-minus {
+  opacity: 0;
+}
+
+.faq-item.is-open .faq-item__icon-plus {
+  opacity: 0;
+}
+
+.faq-item.is-open .faq-item__icon-minus {
+  opacity: 1;
+}
+
+.faq-item__panel {
+  display: none;
+  padding: 0;
+}
+
+/* Desktop: Mulish SemiBold 18 / 140% */
+.faq-item__answer {
+  color: var(--color-neutral-500); /* #615858 */
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.faq-item__trigger:focus-visible {
+  outline: 2px solid var(--color-primary-350);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Laptop: only layout/spacing averages — fonts stay desktop until mobile */
+@media (max-width: 1439px) {
+  .faq > .container {
+    gap: 28px;
+  }
+
+  .faq__header {
+    gap: 48px;
+  }
+
+  .faq-item {
+    gap: 11px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .faq__header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .faq__intro {
+    max-width: none;
+  }
+
+  .faq__actions {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile 375 — 800:15576 */
+@media (max-width: 767px) {
+  /* header 246 + gap 16 + list */
+  .faq > .container {
+    gap: 16px;
+  }
+
+  .faq__header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .faq__intro {
+    gap: 0; /* title → desc */
+    max-width: none;
+  }
+
+  /* Mulish SemiBold 16 / 140%, #615858 */
+  .faq__desc {
+    font-size: 16px;
+  }
+
+  .faq__actions {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  /* Fixed H 48, Mulish SemiBold 14 / 140% */
+  .faq__btn {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .faq__btn img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .faq__list {
+    gap: 6px;
+  }
+
+  /* pad 16; open gap 8 → H closed 64/82, open ~247 */
+  .faq-item {
+    gap: 8px;
+    padding: 16px;
+  }
+
+  .faq-item__trigger {
+    gap: 20px;
+  }
+
+  /* Mulish SemiBold 18 / 140% */
+  .faq-item__question {
+    font-size: 18px;
+  }
+
+  /* Mulish SemiBold 16 / 140% */
+  .faq-item__answer {
+    font-size: 16px;
+  }
+}
