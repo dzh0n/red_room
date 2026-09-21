@@ -1,0 +1,110 @@
+/* Shared tag / chip — link or tooltip trigger */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-700);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.tag:hover,
+.tag:focus-visible {
+  background-color: var(--color-primary-150);
+  outline: none;
+}
+
+.tag--active {
+  background-color: var(--color-primary-500);
+  color: var(--color-primary-50);
+}
+
+.tag--active:hover,
+.tag--active:focus-visible {
+  background-color: var(--color-primary-600);
+  color: var(--color-primary-50);
+}
+
+.tag-item {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-self: flex-start;
+  vertical-align: top;
+}
+
+/*
+ * Tip markup lives next to the tag in HTML for a11y,
+ * but is shown via fixed positioning so it never affects flex wrap.
+ * Figma pop_up 738:9228
+ */
+.tag-tip {
+  box-sizing: border-box;
+  width: 488px;
+  max-width: min(488px, calc(100vw - 32px));
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-neutral-0);
+  box-shadow: var(--shadow-card);
+  color: var(--color-primary-950);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: normal;
+  text-align: left;
+}
+
+/* Hidden by default — never participate in layout */
+.tag-tip:not(.is-open) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  pointer-events: none;
+}
+
+.tag-tip.is-open {
+  position: fixed;
+  z-index: 1000;
+  clip: auto;
+  overflow: visible;
+  width: 488px;
+  max-width: min(488px, calc(100vw - 32px));
+  height: auto;
+  margin: 0;
+  pointer-events: auto;
+}
+
+/* Mobile tags — footer 800:16015 */
+@media (max-width: 767px) {
+  .tag {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 13px;
+  }
+
+  .tag-tip.is-open {
+    width: min(488px, calc(100vw - 32px));
+    max-width: calc(100vw - 32px);
+    padding: 16px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+}

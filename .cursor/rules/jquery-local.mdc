@@ -1,0 +1,10 @@
+---
+description: Use local jQuery for project scripts
+alwaysApply: true
+---
+
+# JavaScript
+
+- Use **jQuery** for interactive UI behavior.
+- Keep scripts **local** in the repo (`js/vendor/…`, `js/…`). Do not load jQuery or plugins from CDN.
+- Prefer small feature scripts (e.g. `js/tags.js`) over one monolith unless asked otherwise.

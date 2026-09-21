@@ -1,0 +1,90 @@
+/* Design tokens from Figma variables (Color + Spacing) — 1920_main */
+
+:root {
+  /* Primary */
+  --color-primary-950: #190707;
+  --color-primary-900: #260a0a;
+  --color-primary-800: #320e0e;
+  --color-primary-700: #4c1414;
+  --color-primary-600: #5e1919;
+  --color-primary-500: #7e2222;
+  --color-primary-400: #984e4e;
+  --color-primary-350: #ab6f6f;
+  --color-primary-300: #be9090;
+  --color-primary-200: #d2b2b2;
+  --color-primary-150: #d8bcbc;
+  --color-primary-100: #e5d3d3;
+  --color-primary-70: #eadcdc;
+  --color-primary-50: #f2e8e8;
+
+  /* Neutral */
+  --color-neutral-950: #0a0909;
+  --color-neutral-900: #131212;
+  --color-neutral-850: #1d1b1b;
+  --color-neutral-800: #272323;
+  --color-neutral-700: #3a3535;
+  --color-neutral-600: #4e4646;
+  --color-neutral-500: #615858;
+  --color-neutral-400: #817979;
+  --color-neutral-350: #989292;
+  --color-neutral-300: #b0abab;
+  --color-neutral-200: #c8c5c5;
+  --color-neutral-150: #dfdede;
+  --color-neutral-100: #efeeee;
+  --color-neutral-50: #f7f6f6;
+  --color-neutral-0: #ffffff;
+
+  /* Semantic */
+  --color-bg-page: var(--color-neutral-100);
+  --color-bg-surface: var(--color-neutral-0);
+  --color-text-primary: var(--color-neutral-950);
+  --color-text-secondary: var(--color-neutral-500);
+  --color-text-muted: var(--color-neutral-400);
+  --color-text-on-dark: var(--color-neutral-0);
+  --color-heading-dark: var(--color-primary-900);
+  --color-heading-on-dark: var(--color-primary-100);
+
+  /* Effects */
+  --shadow-card: 0 4px 30px rgba(94, 25, 25, 0.1);
+
+  /* Radii from layout */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 24px;
+  --radius-pill: 32px;
+  --radius-button: 48px;
+
+  /* Spacing tokens */
+  --space-0: 0;
+  --space-0-5: 2px;
+  --space-1: 4px;
+  --space-1-5: 6px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-18: 72px;
+  --space-20: 80px;
+  --space-30: 120px;
+
+  /* Layout — desktop 1920 */
+  --page-max: 1920px;
+  --content-max: 1680px;
+  --page-pad-x: 120px;
+
+  /*
+   * Uniform gap between reusable page sections
+   * desktop 1920_main: 140px | mobile 375_main: 56px | laptop: average
+   */
+  --section-gap: 140px;
+
+  /* Typography families */
+  --font-sans: "Mulish", sans-serif;
+  --font-display: "Tenor Sans", sans-serif;
+}
