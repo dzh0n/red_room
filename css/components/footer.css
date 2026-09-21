@@ -187,6 +187,10 @@ main + .site-footer {
     display: none;
   }
 
+  .footer-tags .tag {
+    border-radius: 6px;
+  }
+
   .footer-main {
     flex-direction: column;
     align-items: stretch;

@@ -1,0 +1,646 @@
+/* Salons catalog — desktop 738:9174 */
+
+.salons > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.salons__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.salons__slider {
+  width: 100%;
+  margin: 0;
+  overflow: visible;
+}
+
+/* When Swiper is inactive (desktop), keep column stack */
+.salons__slider:not(.swiper-initialized) .salons__list {
+  display: flex;
+  flex-direction: column;
+  transform: none !important;
+}
+
+.salons__slider:not(.swiper-initialized) .salon-card {
+  width: auto;
+  margin: 0 !important;
+}
+
+.salons__more {
+  display: flex;
+  justify-content: center;
+}
+
+/* Outline CTA (Max / Telegram on salon cards) */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-sizing: border-box;
+  height: 64px;
+  padding: 0 32px;
+  border: 1px solid var(--color-neutral-950);
+  border-radius: var(--radius-button);
+  background: transparent;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+
+.btn-outline img {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.btn-outline:hover {
+  opacity: 0.85;
+}
+
+/* Icon-only circular CTA (mobile call / Telegram) */
+.btn-icon {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid var(--color-neutral-950);
+  border-radius: var(--radius-button);
+  background: var(--color-neutral-0);
+  line-height: 0;
+  transition: opacity 0.15s ease;
+}
+
+.btn-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-icon img[src*="telegram"] {
+  width: 21px;
+}
+
+.btn-icon:hover {
+  opacity: 0.85;
+}
+
+/* Salon card — 1680×564, photo 539×564, radius 20 */
+.salon-card {
+  display: flex;
+  gap: 24px;
+  overflow: hidden;
+  min-width: 0;
+  border-radius: var(--radius-md);
+  background-color: var(--color-neutral-0);
+  transition: box-shadow 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .salon-card:hover {
+    box-shadow: var(--shadow-card);
+  }
+}
+
+.salon-card__photo {
+  flex-shrink: 0;
+  width: 539px;
+  height: 564px;
+  overflow: hidden;
+}
+
+.salon-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.salon-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 32px;
+  min-width: 0;
+  padding: 32px;
+}
+
+.salon-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.salon-card__title {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.salon-card__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px 48px;
+}
+
+.salon-card__name {
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-card__rating {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.salon-card__stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.salon-card__stars-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.salon-card__stars-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.salon-card__score {
+  color: var(--color-neutral-500);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-card__reviews {
+  color: var(--color-primary-500);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-card__reviews:hover {
+  text-decoration: underline;
+}
+
+.salon-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-card__service {
+  color: var(--color-neutral-350);
+}
+
+.salon-card__price {
+  color: var(--color-neutral-950);
+}
+
+.salon-card__fav {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  line-height: 0;
+}
+
+.salon-card__fav img {
+  width: 32px;
+  height: 32px;
+}
+
+.salon-card__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.salon-card__row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-card__row img {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.salon-card__phone {
+  color: var(--color-primary-500);
+}
+
+.salon-card__phone:hover {
+  text-decoration: underline;
+}
+
+.salon-card__desc {
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.salon-card__masters {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.salon-card__masters::-webkit-scrollbar {
+  display: none;
+}
+
+.master-thumb {
+  position: relative;
+  flex-shrink: 0;
+  width: 100px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-neutral-0);
+}
+
+.master-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.master-thumb__name {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 2;
+  padding: 2px 6px 4px;
+  border-radius: var(--radius-button);
+  background-color: rgba(10, 9, 9, 0.7);
+  color: var(--color-neutral-0);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.master-thumb--video::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: rgba(76, 20, 20, 0.6);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.master-thumb__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 56px;
+  background: transparent;
+  transform: translate(-50%, -50%);
+  line-height: 0;
+}
+
+.master-thumb__play img {
+  width: 40px;
+  height: 40px;
+}
+
+.master-thumb--more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary-900);
+}
+
+.master-thumb--more img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+}
+
+.master-thumb__count {
+  position: relative;
+  z-index: 1;
+  color: var(--color-primary-100);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+/* Figma 738:9180 buttons — height 64; chevron 24; Max/Telegram icons 20 */
+.salon-card__actions .btn-dark,
+.salon-card__actions .btn-outline {
+  box-sizing: border-box;
+  height: 64px;
+  min-height: 64px;
+  padding: 0 32px;
+  gap: 12px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.salon-card__actions .btn-dark img {
+  width: 24px;
+  height: 24px;
+}
+
+.salon-card__actions .btn-outline img {
+  width: 20px;
+  height: 20px;
+}
+
+.salon-card__actions .btn-outline img[src*="telegram"] {
+  width: 21px;
+}
+
+/* Laptop — averages */
+@media (max-width: 1439px) {
+  .salons > .container {
+    gap: 28px;
+  }
+
+  .salons__list {
+    gap: 24px;
+  }
+
+  .salon-card__photo {
+    width: 400px;
+    height: auto;
+    align-self: stretch;
+    min-height: 420px;
+  }
+
+  .salon-card__content {
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .salon-card__name {
+    font-size: 28px;
+  }
+
+  .salon-card__meta,
+  .salon-card__row,
+  .salon-card__desc,
+  .salon-card__score,
+  .salon-card__reviews {
+    font-size: 16px;
+  }
+
+  .btn-outline {
+    height: 56px;
+    padding: 0 24px;
+    font-size: 17px;
+  }
+
+  .salon-card__actions .btn-dark,
+  .salon-card__actions .btn-outline {
+    height: 56px;
+    min-height: 56px;
+    padding: 0 24px;
+    font-size: 17px;
+  }
+
+  .salon-card__actions .btn-dark img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .salon-card__actions .btn-outline img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .salon-card {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .salon-card__photo {
+    width: 100%;
+    height: 360px;
+    min-height: 0;
+  }
+}
+
+/* Mobile — Figma 851:12173 / 800:14717, Swiper 320px cards */
+@media (max-width: 767px) {
+  .salons > .container {
+    gap: 20px;
+  }
+
+  .salons .section-title {
+    padding-right: 64px;
+  }
+
+  .salons__slider {
+    margin-inline: calc(-1 * var(--page-pad-x));
+    width: calc(100% + 2 * var(--page-pad-x));
+    overflow: hidden;
+  }
+
+  .salons__list.swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 0; /* spacing only via Swiper spaceBetween */
+    box-sizing: content-box;
+  }
+
+  .salon-card.swiper-slide {
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 0;
+    width: 320px;
+    height: auto;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .salon-card__photo {
+    width: 100%;
+    height: 297px;
+    min-height: 0;
+  }
+
+  .salon-card__content {
+    gap: 24px;
+    padding: 16px;
+  }
+
+  .salon-card__head {
+    gap: 16px;
+  }
+
+  .salon-card__title {
+    gap: 4px;
+  }
+
+  .salon-card__top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .salon-card__name {
+    font-size: 24px;
+  }
+
+  .salon-card__rating {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .salon-card__stars {
+    gap: 8px;
+  }
+
+  .salon-card__score,
+  .salon-card__reviews,
+  .salon-card__meta,
+  .salon-card__row {
+    font-size: 16px;
+  }
+
+  .salon-card__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .salon-card__fav {
+    width: 32px;
+    height: 32px;
+  }
+
+  .salon-card__fav img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .salon-card__row {
+    gap: 8px;
+  }
+
+  .salon-card__desc {
+    display: none;
+  }
+
+  .salon-card__masters {
+    gap: 6px;
+  }
+
+  .master-thumb--video {
+    order: -1;
+  }
+
+  .salon-card__actions {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .salon-card__btn-max,
+  .salon-card__btn-tg {
+    display: none;
+  }
+
+  .salon-card__actions .btn-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+  }
+
+  .salon-card__actions .btn-dark {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+    height: 48px;
+    min-height: 48px;
+    padding: 0 16px;
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .salon-card__actions .btn-dark img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .salons__more .btn-dark {
+    width: 100%;
+    height: 48px;
+    min-height: 48px;
+    padding: 0 16px;
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .salons__more .btn-dark img {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -7,49 +7,989 @@
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components/top-banner.css" />
+    <link rel="stylesheet" href="css/components/header.css" />
+    <link rel="stylesheet" href="css/components/mobile-menu.css" />
+    <link rel="stylesheet" href="css/components/hero-banner.css" />
     <link rel="stylesheet" href="css/components/tag.css" />
+    <link rel="stylesheet" href="css/components/category-cards.css" />
+    <link rel="stylesheet" href="css/components/popular-categories.css" />
     <link rel="stylesheet" href="css/components/city-select.css" />
     <link rel="stylesheet" href="css/components/faq.css" />
     <link rel="stylesheet" href="css/components/text-block.css" />
     <link rel="stylesheet" href="css/components/map.css" />
     <link rel="stylesheet" href="css/vendor/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/components/private-masseuses.css" />
+    <link rel="stylesheet" href="css/components/salons.css" />
     <link rel="stylesheet" href="css/components/footer.css" />
   </head>
   <body>
     <div class="page">
-      <!-- 1. Age notice -->
+      <!-- 1. Age notice — 738:9106 / 800:12587 -->
       <aside class="top-banner" aria-label="Возрастное ограничение">
-        <!-- top banner -->
+        <span class="top-banner__age">18+</span>
+        <p class="top-banner__text">
+          Контент рассчитан только<br />на совершеннолетнюю аудиторию
+        </p>
+        <span class="top-banner__age top-banner__age--end" aria-hidden="true"
+          >18+</span
+        >
       </aside>
 
-      <!-- 2–3. Hero banner + header overlay -->
-      <header class="site-header">
-        <!-- header -->
-      </header>
-      <section class="hero-banner" aria-label="Баннер">
-        <!-- banner -->
-      </section>
+      <!-- 2–3. Hero banner + header overlay — header 738:9148 -->
+      <div class="hero-area">
+        <header class="site-header">
+          <div class="site-header__top">
+            <button type="button" class="site-header__meta site-header__city">
+              <img
+                src="images/icon-header-pin.svg"
+                alt=""
+                width="16"
+                height="16"
+              />
+              Пермь
+            </button>
+
+            <div class="site-header__top-right">
+              <div class="site-header__contacts">
+                <span class="site-header__meta">
+                  <img
+                    src="images/icon-header-clock.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                  />
+                  24/7
+                </span>
+                <a class="site-header__meta site-header__phone" href="tel:+73420000000">
+                  <img
+                    src="images/icon-header-phone.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                  />
+                  +7 342 000-00-00
+                </a>
+              </div>
+
+              <div class="site-header__social">
+                <a
+                  class="site-header__social-link"
+                  href="#"
+                  aria-label="ВКонтакте"
+                >
+                  <img
+                    src="images/icon-header-vk.svg"
+                    alt=""
+                    width="32"
+                    height="32"
+                  />
+                </a>
+                <a
+                  class="site-header__social-link"
+                  href="#"
+                  aria-label="Telegram"
+                >
+                  <img
+                    src="images/icon-header-telegram.svg"
+                    alt=""
+                    width="32"
+                    height="32"
+                  />
+                </a>
+                <a
+                  class="site-header__social-link"
+                  href="#"
+                  aria-label="WhatsApp"
+                >
+                  <img
+                    src="images/icon-header-whatsapp.svg"
+                    alt=""
+                    width="32"
+                    height="32"
+                  />
+                </a>
+                <a
+                  class="site-header__social-link"
+                  href="#"
+                  aria-label="Max"
+                >
+                  <img
+                    src="images/icon-header-max.png"
+                    alt=""
+                    width="32"
+                    height="32"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="site-header__bottom">
+            <a class="site-header__logo" href="/" aria-label="Ред Рум — на главную">
+              <img
+                class="site-header__logo-desktop"
+                src="images/logo-header.png"
+                alt="Ред Рум — эротический массаж"
+                width="136"
+                height="64"
+              />
+              <img
+                class="site-header__logo-mobile"
+                src="images/logo-header-mobile.png"
+                alt="Ред Рум — эротический массаж"
+                width="86"
+                height="40"
+              />
+            </a>
+
+            <nav class="site-header__nav" aria-label="Основное меню">
+              <a class="site-header__link" href="#">Салоны</a>
+              <a class="site-header__link is-active" href="#"
+                >Массажистки салонов</a
+              >
+              <a class="site-header__link" href="#">Частные массажистки</a>
+              <a class="site-header__link" href="#">Отзывы</a>
+              <a class="site-header__link" href="#">Акции</a>
+            </nav>
+
+            <div class="site-header__actions site-header__actions--desktop">
+              <a class="site-header__link" href="#">
+                <img
+                  src="images/icon-header-heart.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                Избранное
+              </a>
+              <a class="site-header__link" href="#">
+                <img
+                  src="images/icon-header-salon.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                Вход для салонов
+              </a>
+              <a class="site-header__link" href="#">
+                <img
+                  src="images/icon-header-masseuse.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                Вход для массажисток
+              </a>
+            </div>
+
+            <div class="site-header__actions site-header__actions--mobile">
+              <a
+                class="site-header__icon-btn"
+                href="tel:+73420000000"
+                aria-label="Позвонить"
+              >
+                <img
+                  src="images/icon-header-phone-mobile.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+              </a>
+              <a class="site-header__icon-btn" href="#" aria-label="Избранное">
+                <img
+                  src="images/icon-header-heart.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+              </a>
+              <button
+                type="button"
+                class="site-header__icon-btn site-header__menu-toggle"
+                aria-label="Меню"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <img
+                  class="site-header__menu-icon site-header__menu-icon--burger"
+                  src="images/icon-header-burger.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                <img
+                  class="site-header__menu-icon site-header__menu-icon--close"
+                  src="images/icon-header-close.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                  hidden
+                />
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <!-- Mobile menu — 1009:23779 (open state on 1009:21911) -->
+        <div
+          class="mobile-menu"
+          id="mobile-menu"
+          hidden
+          aria-hidden="true"
+        >
+          <div class="mobile-menu__inner">
+            <button type="button" class="mobile-menu__city site-header__meta">
+              <img
+                src="images/icon-header-pin.svg"
+                alt=""
+                width="16"
+                height="16"
+              />
+              Пермь
+            </button>
+
+            <nav class="mobile-menu__nav" aria-label="Мобильное меню">
+              <a class="site-header__link" href="#">Салоны</a>
+              <a class="site-header__link is-active" href="#"
+                >Массажистки салонов</a
+              >
+              <a class="site-header__link" href="#">Частные массажистки</a>
+              <a class="site-header__link" href="#">Отзывы</a>
+              <a class="site-header__link" href="#">Акции</a>
+            </nav>
+
+            <div class="mobile-menu__personal">
+              <a class="site-header__link" href="#">
+                <img
+                  src="images/icon-header-heart.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                Избранное
+              </a>
+              <a class="site-header__link" href="#">
+                <img
+                  src="images/icon-header-salon.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                Вход для салонов
+              </a>
+              <a class="site-header__link" href="#">
+                <img
+                  src="images/icon-header-masseuse.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                Вход для массажисток
+              </a>
+            </div>
+
+            <div class="mobile-menu__contacts">
+              <span class="site-header__meta">
+                <img
+                  src="images/icon-header-clock.svg"
+                  alt=""
+                  width="16"
+                  height="16"
+                />
+                24/7
+              </span>
+              <a class="site-header__meta site-header__phone" href="tel:+73420000000">
+                <img
+                  src="images/icon-header-phone.svg"
+                  alt=""
+                  width="16"
+                  height="16"
+                />
+                +7 342 000-00-00
+              </a>
+            </div>
+
+            <div class="mobile-menu__social">
+              <a class="mobile-menu__social-link" href="#" aria-label="VK">
+                <img
+                  src="images/icon-header-vk.svg"
+                  alt=""
+                  width="44"
+                  height="44"
+                />
+              </a>
+              <a class="mobile-menu__social-link" href="#" aria-label="Telegram">
+                <img
+                  src="images/icon-header-telegram.svg"
+                  alt=""
+                  width="44"
+                  height="44"
+                />
+              </a>
+              <a class="mobile-menu__social-link" href="#" aria-label="WhatsApp">
+                <img
+                  src="images/icon-header-whatsapp.svg"
+                  alt=""
+                  width="44"
+                  height="44"
+                />
+              </a>
+              <a class="mobile-menu__social-link" href="#" aria-label="Max">
+                <img
+                  src="images/icon-header-max.png"
+                  alt=""
+                  width="44"
+                  height="44"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <section class="hero-banner" aria-label="Баннер">
+          <div class="hero-banner__bg" aria-hidden="true">
+            <img
+              class="hero-banner__bg-desktop"
+              src="images/hero-bg.png"
+              alt=""
+              width="1920"
+              height="1280"
+            />
+            <img
+              class="hero-banner__bg-mobile"
+              src="images/hero-bg-mobile.png"
+              alt=""
+              width="768"
+              height="512"
+            />
+          </div>
+          <div class="hero-banner__content">
+            <h1 class="hero-banner__title">
+              Эротический<br />массаж Пермь
+              <button
+                type="button"
+                class="section-help"
+                aria-label="Справка"
+              >
+                <img
+                  src="images/icon-map-help.svg"
+                  alt=""
+                  width="40"
+                  height="40"
+                />
+              </button>
+            </h1>
+
+            <div class="hero-banner__bottom">
+              <div class="hero-banner__stats">
+                <div class="hero-stat">
+                  <img
+                    class="hero-stat__icon"
+                    src="images/icon-hero-ankety.svg"
+                    alt=""
+                    width="48"
+                    height="48"
+                  />
+                  <p class="hero-stat__text">
+                    <span class="hero-stat__value">128</span>
+                    <span class="hero-stat__label">анкет</span>
+                  </p>
+                </div>
+                <div class="hero-stat">
+                  <img
+                    class="hero-stat__icon"
+                    src="images/icon-hero-salons.svg"
+                    alt=""
+                    width="48"
+                    height="48"
+                  />
+                  <p class="hero-stat__text">
+                    <span class="hero-stat__value">43</span>
+                    <span class="hero-stat__label">салона</span>
+                  </p>
+                </div>
+              </div>
+
+              <a class="hero-banner__promo" href="#">
+                <img
+                  class="hero-banner__promo-desktop"
+                  src="images/hero-promo.png"
+                  alt="В городе много дорог, но только одна — к удовольствию"
+                  width="539"
+                  height="196"
+                />
+                <img
+                  class="hero-banner__promo-mobile"
+                  src="images/hero-promo-mobile.png"
+                  alt="В городе много дорог, но только одна — к удовольствию"
+                  width="343"
+                  height="124"
+                />
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
 
       <main>
-        <!-- 4. Category cards: салоны / частные / мастера -->
+        <!-- 4. Category cards — 738:9149 -->
         <section class="section category-cards" aria-label="Категории">
           <div class="container">
-            <!-- Frame 1000005619 -->
+            <div class="category-cards__list">
+              <a class="category-card" href="#">
+                <div class="category-card__top">
+                  <img
+                    class="category-card__icon"
+                    src="images/icon-category-salons.svg"
+                    alt=""
+                    width="48"
+                    height="48"
+                  />
+                  <span class="category-card__arrow" aria-hidden="true">
+                    <img
+                      class="category-card__arrow-default"
+                      src="images/icon-arrow-right-muted.svg"
+                      alt=""
+                      width="32"
+                      height="32"
+                    />
+                    <img
+                      class="category-card__arrow-hover"
+                      src="images/icon-arrow-right-hover.svg"
+                      alt=""
+                      width="32"
+                      height="32"
+                    />
+                  </span>
+                </div>
+                <div class="category-card__title">
+                  <span class="category-card__name">Салоны Эротического массажа</span>
+                  <span class="category-card__count">43</span>
+                </div>
+                <p class="category-card__desc">
+                  Список салонов, открытые сейчас, SPA для мужчин, карточка салона.
+                </p>
+              </a>
+
+              <a class="category-card" href="#">
+                <div class="category-card__top">
+                  <img
+                    class="category-card__icon"
+                    src="images/icon-category-private.svg"
+                    alt=""
+                    width="48"
+                    height="48"
+                  />
+                  <span class="category-card__arrow" aria-hidden="true">
+                    <img
+                      class="category-card__arrow-default"
+                      src="images/icon-arrow-right-muted.svg"
+                      alt=""
+                      width="32"
+                      height="32"
+                    />
+                    <img
+                      class="category-card__arrow-hover"
+                      src="images/icon-arrow-right-hover.svg"
+                      alt=""
+                      width="32"
+                      height="32"
+                    />
+                  </span>
+                </div>
+                <div class="category-card__title">
+                  <span class="category-card__name">Частные массажистки</span>
+                  <span class="category-card__count">156</span>
+                </div>
+                <p class="category-card__desc">
+                  Анкеты девушек из салонов: фото, салон, цена, параметры и быстрый
+                  переход к записи.
+                </p>
+              </a>
+
+              <a class="category-card" href="#">
+                <div class="category-card__top">
+                  <img
+                    class="category-card__icon"
+                    src="images/icon-category-masters.svg"
+                    alt=""
+                    width="48"
+                    height="48"
+                  />
+                  <span class="category-card__arrow" aria-hidden="true">
+                    <img
+                      class="category-card__arrow-default"
+                      src="images/icon-arrow-right-muted.svg"
+                      alt=""
+                      width="32"
+                      height="32"
+                    />
+                    <img
+                      class="category-card__arrow-hover"
+                      src="images/icon-arrow-right-hover.svg"
+                      alt=""
+                      width="32"
+                      height="32"
+                    />
+                  </span>
+                </div>
+                <div class="category-card__title">
+                  <span class="category-card__name">Мастера салонов</span>
+                  <span class="category-card__count">43</span>
+                </div>
+                <p class="category-card__desc">
+                  Релакс, body, тантрический, 4 руки, SPA для двоих, сертификаты.
+                </p>
+              </a>
+            </div>
           </div>
         </section>
 
-        <!-- 5. Popular categories / tags -->
+        <!-- 5. Popular categories — 738:9153 / mobile 800:14042 -->
         <section class="section popular-categories" aria-label="Популярные категории">
           <div class="container">
-            <!-- category / tags -->
+            <div class="popular-categories__card">
+              <div class="popular-categories__head">
+                <h2 class="popular-categories__title">Популярные категории</h2>
+                <span class="popular-categories__count">16</span>
+              </div>
+              <div class="popular-categories__slider swiper">
+                <div class="popular-categories__list swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a class="popular-categories__link" href="#">Лучшие салоны</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="popular-categories__link" href="#">Недорогой массаж</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="popular-categories__link" href="#">Премиум SPA</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="popular-categories__link" href="#">С оплатой картой</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="popular-categories__link" href="#">С парковкой</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="popular-categories__link" href="#">Новые салоны</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="popular-categories__link" href="#">Массажистки дня</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="popular-categories__link" href="#">С подарками</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="popular-categories__link" href="#">С выездом</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="popular-categories__link" href="#">Принимают у себя</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="popular-categories__link" href="#">С оплатой картой</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="popular-categories__link" href="#">Недорогой массаж</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="popular-categories__link" href="#">Лучшие салоны</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="popular-categories__link" href="#">Премиум SPA</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="popular-categories__link" href="#">Новые салоны</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="popular-categories__link" href="#">С парковкой</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        <!-- 6. Salons catalog -->
+        <!-- 6. Salons catalog — 738:9174 -->
         <section class="section salons" aria-label="Салоны">
           <div class="container">
-            <!-- Салоны -->
+            <h2 class="section-title">
+              Салоны эротического массажа в Перми
+              <button
+                type="button"
+                class="section-help"
+                aria-label="Справка по разделу салоны"
+              >
+                <img
+                  src="images/icon-map-help.svg"
+                  alt=""
+                  width="40"
+                  height="40"
+                />
+              </button>
+            </h2>
+
+            <div class="salons__slider swiper">
+              <div class="salons__list swiper-wrapper">
+              <article class="salon-card swiper-slide">
+                <div class="salon-card__photo">
+                  <img
+                    src="images/salon-mr-president.png"
+                    alt="Mr. President"
+                    width="539"
+                    height="564"
+                  />
+                </div>
+                <div class="salon-card__content">
+                  <div class="salon-card__head">
+                    <div class="salon-card__title">
+                      <div class="salon-card__top">
+                        <h3 class="salon-card__name">Mr. President</h3>
+                        <div class="salon-card__rating">
+                          <div class="salon-card__stars">
+                            <span class="salon-card__stars-icons" aria-hidden="true">
+                              <img src="images/icon-star.svg" alt="" width="20" height="20" />
+                              <img src="images/icon-star.svg" alt="" width="20" height="20" />
+                              <img src="images/icon-star.svg" alt="" width="20" height="20" />
+                              <img src="images/icon-star.svg" alt="" width="20" height="20" />
+                              <img src="images/icon-star-empty.svg" alt="" width="20" height="20" />
+                            </span>
+                            <span class="salon-card__score">4.9</span>
+                          </div>
+                          <a class="salon-card__reviews" href="#">48 отзывов</a>
+                        </div>
+                      </div>
+                      <p class="salon-card__meta">
+                        <span class="salon-card__service">Эротический массаж и SPA-программы</span>
+                        <span class="salon-card__price">от 5600 ₽ / час</span>
+                      </p>
+                    </div>
+                    <button type="button" class="salon-card__fav" aria-label="В избранное">
+                      <img src="images/icon-heart.svg" alt="" width="32" height="32" />
+                    </button>
+                  </div>
+                  <div class="salon-card__contacts">
+                    <p class="salon-card__row">
+                      <img src="images/icon-pin.svg" alt="" width="20" height="20" />
+                      Пермь, Тополевый переулок 5
+                    </p>
+                    <a class="salon-card__row salon-card__phone" href="tel:+73422008650">
+                      <img src="images/icon-phone-dark.svg" alt="" width="20" height="20" />
+                      +7 (342) 200-86-50
+                    </a>
+                  </div>
+                  <p class="salon-card__desc">
+                    Mr. President - карточка салона с описанием, адресом, ценами,
+                    программами, мастерами, отзывами и быстрыми кнопками связи.
+                    Здесь пользователь принимает решение: открыть маршрут,
+                    позвонить или записаться.
+                  </p>
+                  <ul class="salon-card__masters">
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb master-thumb--video">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                      <span class="master-thumb__play" aria-hidden="true">
+                        <img src="images/icon-play.png" alt="" width="40" height="40" />
+                      </span>
+                    </li>
+                    <li class="master-thumb master-thumb--more" aria-label="Ещё 9 мастеров">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__count">+9</span>
+                    </li>
+                  </ul>
+                  <div class="salon-card__actions">
+                    <a class="btn-dark salon-card__btn-more" href="#">
+                      Подробнее
+                      <img src="images/icon-chevron-right.svg" alt="" width="24" height="24" />
+                    </a>
+                    <a class="btn-outline salon-card__btn-max" href="#">
+                      <img src="images/icon-max.svg" alt="" width="20" height="20" />
+                      Max
+                    </a>
+                    <a class="btn-outline salon-card__btn-tg" href="#">
+                      <img src="images/icon-telegram-dark.svg" alt="" width="21" height="20" />
+                      Telegram
+                    </a>
+                    <a
+                      class="btn-icon salon-card__btn-call"
+                      href="tel:+73422008650"
+                      aria-label="Позвонить"
+                    >
+                      <img src="images/icon-phone-dark.svg" alt="" width="20" height="20" />
+                    </a>
+                    <a class="btn-icon salon-card__btn-tg-icon" href="#" aria-label="Telegram">
+                      <img src="images/icon-telegram-dark.svg" alt="" width="21" height="20" />
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="salon-card swiper-slide">
+                <div class="salon-card__photo">
+                  <img
+                    src="images/salon-premier-spa.png"
+                    alt="Премьер SPA"
+                    width="539"
+                    height="564"
+                  />
+                </div>
+                <div class="salon-card__content">
+                  <div class="salon-card__head">
+                    <div class="salon-card__title">
+                      <div class="salon-card__top">
+                        <h3 class="salon-card__name">Премьер SPA</h3>
+                        <div class="salon-card__rating">
+                          <div class="salon-card__stars">
+                            <span class="salon-card__stars-icons" aria-hidden="true">
+                              <img src="images/icon-star.svg" alt="" width="20" height="20" />
+                              <img src="images/icon-star.svg" alt="" width="20" height="20" />
+                              <img src="images/icon-star.svg" alt="" width="20" height="20" />
+                              <img src="images/icon-star.svg" alt="" width="20" height="20" />
+                              <img src="images/icon-star-empty.svg" alt="" width="20" height="20" />
+                            </span>
+                            <span class="salon-card__score">4.9</span>
+                          </div>
+                          <a class="salon-card__reviews" href="#">48 отзывов</a>
+                        </div>
+                      </div>
+                      <p class="salon-card__meta">
+                        <span class="salon-card__service">Эротический массаж и SPA-программы</span>
+                        <span class="salon-card__price">от 5600 ₽ / час</span>
+                      </p>
+                    </div>
+                    <button type="button" class="salon-card__fav" aria-label="В избранное">
+                      <img src="images/icon-heart.svg" alt="" width="32" height="32" />
+                    </button>
+                  </div>
+                  <div class="salon-card__contacts">
+                    <p class="salon-card__row">
+                      <img src="images/icon-pin.svg" alt="" width="20" height="20" />
+                      Пермь, Окулова 18
+                    </p>
+                    <a class="salon-card__row salon-card__phone" href="tel:+73422483587">
+                      <img src="images/icon-phone-dark.svg" alt="" width="20" height="20" />
+                      +7 (342) 248-35-87
+                    </a>
+                  </div>
+                  <p class="salon-card__desc">
+                    Mr. President - карточка салона с описанием, адресом, ценами,
+                    программами, мастерами, отзывами и быстрыми кнопками связи.
+                    Здесь пользователь принимает решение: открыть маршрут,
+                    позвонить или записаться.
+                  </p>
+                  <ul class="salon-card__masters">
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb master-thumb--video">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                      <span class="master-thumb__play" aria-hidden="true">
+                        <img src="images/icon-play.png" alt="" width="40" height="40" />
+                      </span>
+                    </li>
+                    <li class="master-thumb master-thumb--more" aria-label="Ещё 9 мастеров">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__count">+9</span>
+                    </li>
+                  </ul>
+                  <div class="salon-card__actions">
+                    <a class="btn-dark salon-card__btn-more" href="#">
+                      Подробнее
+                      <img src="images/icon-chevron-right.svg" alt="" width="24" height="24" />
+                    </a>
+                    <a class="btn-outline salon-card__btn-max" href="#">
+                      <img src="images/icon-max.svg" alt="" width="20" height="20" />
+                      Max
+                    </a>
+                    <a class="btn-outline salon-card__btn-tg" href="#">
+                      <img src="images/icon-telegram-dark.svg" alt="" width="21" height="20" />
+                      Telegram
+                    </a>
+                    <a
+                      class="btn-icon salon-card__btn-call"
+                      href="tel:+73422483587"
+                      aria-label="Позвонить"
+                    >
+                      <img src="images/icon-phone-dark.svg" alt="" width="20" height="20" />
+                    </a>
+                    <a class="btn-icon salon-card__btn-tg-icon" href="#" aria-label="Telegram">
+                      <img src="images/icon-telegram-dark.svg" alt="" width="21" height="20" />
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="salon-card swiper-slide">
+                <div class="salon-card__photo">
+                  <img
+                    src="images/salon-studio-109.png"
+                    alt="Студия 109"
+                    width="539"
+                    height="564"
+                  />
+                </div>
+                <div class="salon-card__content">
+                  <div class="salon-card__head">
+                    <div class="salon-card__title">
+                      <div class="salon-card__top">
+                        <h3 class="salon-card__name">Студия 109</h3>
+                        <div class="salon-card__rating">
+                          <div class="salon-card__stars">
+                            <span class="salon-card__stars-icons" aria-hidden="true">
+                              <img src="images/icon-star.svg" alt="" width="20" height="20" />
+                              <img src="images/icon-star.svg" alt="" width="20" height="20" />
+                              <img src="images/icon-star.svg" alt="" width="20" height="20" />
+                              <img src="images/icon-star.svg" alt="" width="20" height="20" />
+                              <img src="images/icon-star-empty.svg" alt="" width="20" height="20" />
+                            </span>
+                            <span class="salon-card__score">4.9</span>
+                          </div>
+                          <a class="salon-card__reviews" href="#">48 отзывов</a>
+                        </div>
+                      </div>
+                      <p class="salon-card__meta">
+                        <span class="salon-card__service">Эротический массаж и SPA-программы</span>
+                        <span class="salon-card__price">от 5600 ₽ / час</span>
+                      </p>
+                    </div>
+                    <button type="button" class="salon-card__fav" aria-label="В избранное">
+                      <img src="images/icon-heart.svg" alt="" width="32" height="32" />
+                    </button>
+                  </div>
+                  <div class="salon-card__contacts">
+                    <p class="salon-card__row">
+                      <img src="images/icon-pin.svg" alt="" width="20" height="20" />
+                      Пермь, Пушкина 109
+                    </p>
+                    <a class="salon-card__row salon-card__phone" href="tel:+79586975609">
+                      <img src="images/icon-phone-dark.svg" alt="" width="20" height="20" />
+                      +7 (958) 697-56-09
+                    </a>
+                  </div>
+                  <p class="salon-card__desc">
+                    Mr. President - карточка салона с описанием, адресом, ценами,
+                    программами, мастерами, отзывами и быстрыми кнопками связи.
+                    Здесь пользователь принимает решение: открыть маршрут,
+                    позвонить или записаться.
+                  </p>
+                  <ul class="salon-card__masters">
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                    </li>
+                    <li class="master-thumb master-thumb--video">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__name">Ангелина</span>
+                      <span class="master-thumb__play" aria-hidden="true">
+                        <img src="images/icon-play.png" alt="" width="40" height="40" />
+                      </span>
+                    </li>
+                    <li class="master-thumb master-thumb--more" aria-label="Ещё 9 мастеров">
+                      <img src="images/master-angelina.png" alt="" width="100" height="120" />
+                      <span class="master-thumb__count">+9</span>
+                    </li>
+                  </ul>
+                  <div class="salon-card__actions">
+                    <a class="btn-dark salon-card__btn-more" href="#">
+                      Подробнее
+                      <img src="images/icon-chevron-right.svg" alt="" width="24" height="24" />
+                    </a>
+                    <a class="btn-outline salon-card__btn-max" href="#">
+                      <img src="images/icon-max.svg" alt="" width="20" height="20" />
+                      Max
+                    </a>
+                    <a class="btn-outline salon-card__btn-tg" href="#">
+                      <img src="images/icon-telegram-dark.svg" alt="" width="21" height="20" />
+                      Telegram
+                    </a>
+                    <a
+                      class="btn-icon salon-card__btn-call"
+                      href="tel:+79586975609"
+                      aria-label="Позвонить"
+                    >
+                      <img src="images/icon-phone-dark.svg" alt="" width="20" height="20" />
+                    </a>
+                    <a class="btn-icon salon-card__btn-tg-icon" href="#" aria-label="Telegram">
+                      <img src="images/icon-telegram-dark.svg" alt="" width="21" height="20" />
+                    </a>
+                  </div>
+                </div>
+              </article>
+              </div>
+            </div>
+
+            <div class="salons__more">
+              <button type="button" class="btn-dark">
+                Показать ещё 9 салонов
+                <img src="images/icon-chevron-right.svg" alt="" width="24" height="24" />
+              </button>
+            </div>
           </div>
         </section>
 
@@ -1256,6 +2196,9 @@
 
     <script src="js/vendor/jquery-3.7.1.min.js"></script>
     <script src="js/vendor/swiper-bundle.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/popular-categories.js"></script>
+    <script src="js/salons.js"></script>
     <script src="js/private-masseuses.js"></script>
     <script src="js/tags.js"></script>
     <script src="js/faq.js"></script>

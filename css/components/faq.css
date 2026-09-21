@@ -1,6 +1,4 @@
-/* FAQ — desktop header 738:9199 / list 338:2917 / mobile 800:15576
- * Font sizes: exact Figma (desktop until 767, then mobile). No laptop averages.
- */
+/* FAQ — desktop header 738:9199 / list 338:2917 / mobile 800:15576 */
 
 .faq > .container {
   display: flex;
@@ -172,7 +170,7 @@
   border-radius: 4px;
 }
 
-/* Laptop: only layout/spacing averages — fonts stay desktop until mobile */
+/* Laptop: spacing + type averages */
 @media (max-width: 1439px) {
   .faq > .container {
     gap: 28px;
@@ -182,9 +180,27 @@
     gap: 48px;
   }
 
+  .faq__desc {
+    font-size: 17px; /* (18 + 16) / 2 */
+  }
+
+  .faq__btn {
+    height: 56px; /* (64 + 48) / 2 */
+    padding: 0 24px;
+    font-size: 17px; /* (20 + 14) / 2 */
+  }
+
   .faq-item {
     gap: 11px;
     padding: 20px;
+  }
+
+  .faq-item__question {
+    font-size: 21px; /* (24 + 18) / 2 */
+  }
+
+  .faq-item__answer {
+    font-size: 17px; /* (18 + 16) / 2 */
   }
 }
 

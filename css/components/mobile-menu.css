@@ -1,0 +1,121 @@
+/* Mobile menu open — Figma 1009:21911 / panel 1009:23779 */
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* top-banner 58 + header 60 + gap 20 */
+  padding: 138px 16px 40px;
+  background-color: var(--color-neutral-850); /* #1d1b1b */
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-menu.is-open {
+  display: block;
+}
+
+.mobile-menu__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 343px;
+  margin: 0 auto;
+}
+
+.mobile-menu__city {
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-primary-300);
+  cursor: pointer;
+}
+
+.mobile-menu__nav,
+.mobile-menu__personal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.mobile-menu__nav .site-header__link.is-active {
+  background-color: rgba(10, 9, 9, 0.9); /* #0a0909e5 */
+  color: var(--color-primary-100);
+}
+
+.mobile-menu__contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  color: var(--color-primary-300);
+}
+
+.mobile-menu__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.mobile-menu__social-link {
+  display: block;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mobile-menu__social-link img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+/* Open state: lock page, pin chrome above overlay */
+body.is-menu-open {
+  overflow: hidden;
+}
+
+body.is-menu-open .top-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+
+body.is-menu-open .site-header {
+  position: fixed;
+  top: 58px;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+body.is-menu-open .site-header__actions--mobile > .site-header__icon-btn:not(.site-header__menu-toggle) {
+  display: none;
+}
+
+body.is-menu-open .site-header__icon-btn .site-header__menu-icon--burger {
+  display: none;
+}
+
+body.is-menu-open .site-header__icon-btn .site-header__menu-icon--close {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}

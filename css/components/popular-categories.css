@@ -1,0 +1,115 @@
+/* Popular categories — desktop 738:9153, mobile 800:14042 */
+
+.popular-categories__card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background-color: var(--color-neutral-0);
+}
+
+.popular-categories__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.popular-categories__title {
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.popular-categories__count {
+  color: var(--color-neutral-200);
+  font-family: var(--font-sans);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.popular-categories__slider {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.popular-categories__list {
+  display: flex;
+  box-sizing: content-box;
+}
+
+/* One slide = one link, width by content (not 100%) */
+.popular-categories__list .swiper-slide {
+  width: auto;
+  height: auto;
+}
+
+.popular-categories__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-700);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.popular-categories__link:hover,
+.popular-categories__link:focus-visible {
+  background-color: var(--color-primary-150);
+  outline: none;
+}
+
+/* Laptop — averages */
+@media (max-width: 1439px) {
+  .popular-categories__card {
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .popular-categories__title,
+  .popular-categories__count {
+    font-size: 21px;
+  }
+
+  .popular-categories__link {
+    padding: 6px 12px;
+    font-size: 14px; /* (16 + 13) / 2 ≈ 14.5 */
+  }
+}
+
+/* Mobile — 800:14042 */
+@media (max-width: 767px) {
+  .popular-categories__card {
+    gap: 20px;
+    padding: 16px;
+  }
+
+  .popular-categories__head {
+    gap: 6px;
+  }
+
+  .popular-categories__title,
+  .popular-categories__count {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .popular-categories__link {
+    padding: 4px 8px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
