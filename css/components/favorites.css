@@ -1,0 +1,41 @@
+/* Favorites — empty hint under tabs, Figma 592:15618, scaled ~85% */
+
+.favorites > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px; /* Figma tabs → content 32 */
+}
+
+.favorites__panel[hidden] {
+  display: none !important;
+}
+
+.favorites__panel.is-active {
+  display: block;
+}
+
+.favorites .girl-card__fav.is-active,
+.favorites .salon-card__fav.is-active {
+  opacity: 1;
+}
+
+
+@media (max-width: 1439px) {
+  .favorites > .container {
+    gap: 24px;
+  }
+
+  .favorites__empty {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .favorites > .container {
+    gap: 20px;
+  }
+
+  .favorites__empty {
+    font-size: 14px;
+  }
+}
