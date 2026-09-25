@@ -1,0 +1,91 @@
+/* Sort tabs — desktop Figma 587:6122, scaled ~85% */
+
+/* Tighter gap after filters (Figma ~38) */
+.filters + .sort-tabs {
+  margin-top: 40px;
+}
+
+.sort-tabs__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-tabs__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--color-neutral-950);
+  border-radius: var(--radius-button);
+  background: transparent;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.sort-tabs__btn.is-active,
+.sort-tabs__btn[aria-pressed="true"] {
+  border-color: transparent;
+  background-color: var(--color-neutral-950);
+  color: var(--color-neutral-0);
+}
+
+.sort-tabs__btn:hover:not(.is-active):not([aria-pressed="true"]) {
+  background-color: rgba(10, 9, 9, 0.06);
+}
+
+.sort-tabs__btn:focus-visible {
+  outline: 2px solid var(--color-primary-400);
+  outline-offset: 2px;
+}
+
+/* Laptop — averages */
+@media (max-width: 1439px) {
+  .filters + .sort-tabs {
+    margin-top: 32px;
+  }
+
+  .sort-tabs__btn {
+    height: 40px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile — Figma 3019:24182 / 853:14648 */
+@media (max-width: 767px) {
+  .filters + .sort-tabs {
+    margin-top: 24px; /* Figma gap button → tabs */
+  }
+
+  .sort-tabs__list {
+    flex-wrap: nowrap;
+    gap: 10px; /* Figma 12 */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .sort-tabs__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sort-tabs__btn {
+    flex: 0 0 auto;
+    height: 38px; /* Figma 44, slightly tighter */
+    padding: 0 16px; /* Figma 20 */
+    font-size: 14px; /* Figma 16 */
+  }
+}

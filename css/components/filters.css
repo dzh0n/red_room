@@ -1,0 +1,420 @@
+/* Catalog filters — desktop Figma 853:12382, scaled ~85% */
+
+/* Tighter gap after popular categories (stacked cards, not section-gap) */
+.popular-categories + .filters {
+  margin-top: 24px;
+}
+
+.filters__card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Figma 24 */
+  margin: 0;
+  padding: 17px 28px 28px; /* Figma 20 / 32 / 32 / 32 */
+  border-radius: var(--radius-md); /* 20 */
+  background-color: var(--color-neutral-0);
+}
+
+.filters__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.filters__title {
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 28px; /* Figma 32 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.filters__close {
+  display: none;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.filters__close img {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.filters__group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Figma title→fields ~20 */
+  padding-bottom: 20px; /* Figma group paddingBottom 24 */
+}
+
+.filters__group-title {
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.filters__fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 34px; /* Figma 40 */
+}
+
+.filters__pair {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px; /* Figma 12 */
+  min-width: 0;
+}
+
+.filters__field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Figma 6 */
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.filters__label {
+  color: var(--color-text-muted); /* close to Figma label */
+  font-family: var(--font-sans);
+  font-size: 14px; /* Figma 16 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.filters__input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 52px; /* Figma 64 → project control height */
+  padding: 0 16px; /* Figma 20 */
+  border: 1px solid var(--color-neutral-200); /* #c8c5c5 */
+  border-radius: var(--radius-sm); /* 12 */
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 17px; /* Figma 20 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.filters__input::placeholder {
+  color: var(--color-neutral-500); /* #615858 */
+  opacity: 1;
+}
+
+.filters__input:focus {
+  outline: none;
+  border-color: var(--color-primary-400);
+}
+
+.filters__checks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px; /* Figma 24 */
+}
+
+.filters__checks .filters__group-title {
+  flex: 0 0 auto;
+  min-width: 170px; /* Figma ~200 scaled */
+}
+
+.filters__check {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* Figma 12 */
+  min-width: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 400;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.filters__check-box {
+  appearance: none;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 18px; /* Figma 20 */
+  height: 18px;
+  margin: 0;
+  border: 1px solid var(--color-neutral-950);
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.filters__check-box:checked {
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-700);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='2' d='M2 6l3 3 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+}
+
+.filters__check-box:focus-visible {
+  outline: 2px solid var(--color-primary-400);
+  outline-offset: 2px;
+}
+
+.filters__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px; /* Figma 24 */
+}
+
+.filters__actions .btn-dark {
+  height: 44px;
+  padding: 0 18px;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.filters__actions .btn-dark img {
+  width: 18px;
+  height: 18px;
+}
+
+.filters__actions .btn-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Laptop — averages */
+@media (max-width: 1439px) {
+  .popular-categories + .filters {
+    margin-top: 20px;
+  }
+
+  .filters__card {
+    gap: 18px;
+    padding: 16px 24px 24px;
+  }
+
+  .filters__title {
+    font-size: 24px; /* (28 + 20) / 2 */
+  }
+
+  .filters__fields {
+    gap: 24px;
+  }
+
+  .filters__input {
+    height: 48px;
+    font-size: 15px;
+  }
+
+  .filters__group-title,
+  .filters__check {
+    font-size: 14px;
+  }
+
+  .filters__checks .filters__group-title {
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .filters__fields {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .filters__checks .filters__group-title {
+    flex: 1 0 100%;
+    min-width: 0;
+  }
+}
+
+/* Toggle — mobile only (Figma 3019:24182); beat .btn-dark display */
+.filters__toggle.btn-dark {
+  display: none;
+}
+
+.filters__backdrop {
+  display: none;
+}
+
+/* Mobile — bottom sheet slides up (screenshot / Figma 853:15298) */
+@media (max-width: 767px) {
+  .popular-categories + .filters {
+    margin-top: 16px;
+  }
+
+  .filters__toggle.btn-dark {
+    display: inline-flex;
+    width: 100%;
+    height: 44px;
+    padding: 0 18px;
+    gap: 10px;
+    font-size: 15px;
+  }
+
+  .filters__toggle img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .filters__backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 59;
+    background-color: rgba(10, 9, 9, 0.55);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  .filters__card {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    box-sizing: border-box;
+    width: 100%;
+    max-height: calc(100% - 94px);
+    max-height: calc(100dvh - 94px);
+    gap: 28px; /* Figma 32 */
+    margin: 0;
+    padding: 20px 20px 32px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    box-shadow: 0 4px 30px rgba(94, 25, 25, 0.1);
+    transform: translateY(100%);
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      transform 0.35s ease,
+      visibility 0.35s ease;
+  }
+
+  body.is-filters-open {
+    overflow: hidden;
+  }
+
+  body.is-filters-open .filters__backdrop {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  body.is-filters-open .filters__card {
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .filters__close {
+    display: block;
+  }
+
+  .filters__title {
+    font-size: 24px; /* Figma mobile */
+  }
+
+  .filters__group {
+    gap: 12px;
+    padding-bottom: 0;
+  }
+
+  .filters__group-title {
+    font-size: 16px; /* Figma 18 */
+  }
+
+  .filters__fields {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .filters__pair {
+    gap: 10px; /* Figma 12 */
+  }
+
+  .filters__label {
+    font-size: 14px; /* Figma 16 */
+  }
+
+  .filters__input {
+    height: 48px;
+    padding: 0 16px;
+    font-size: 15px; /* Figma 20 scaled */
+  }
+
+  .filters__checks {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .filters__checks .filters__group-title {
+    flex: 0 0 auto;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .filters__check {
+    gap: 10px;
+    font-size: 15px; /* Figma 18 */
+  }
+
+  .filters__check-box {
+    width: 18px;
+    height: 18px;
+  }
+
+  .filters__actions {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 20px; /* Figma 24 */
+  }
+
+  .filters__actions .btn-dark {
+    width: 100%;
+    height: 44px;
+    padding: 0 18px;
+    font-size: 15px;
+  }
+
+  .filters__actions .btn-dark img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .filters__actions .btn-link {
+    width: 100%;
+    font-size: 15px; /* Figma 18 */
+    text-align: center;
+  }
+}

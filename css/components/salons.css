@@ -1,5 +1,10 @@
 /* Salons catalog — desktop 738:9174 */
 
+/* Tighter gap after sort tabs (catalog page) */
+.sort-tabs + .salons {
+  margin-top: 32px;
+}
+
 .salons > .container {
   display: flex;
   flex-direction: column;
@@ -35,12 +40,14 @@
   justify-content: center;
 }
 
-/* Salon card — scaled photo/content */
-.salon-card {
+/* Salon card — scaled photo/content; beat .swiper-slide { display:block } */
+.salon-card,
+.salon-card.swiper-slide {
   display: flex;
   gap: 20px;
   overflow: hidden;
   min-width: 0;
+  height: auto;
   border-radius: var(--radius-md);
   background-color: var(--color-neutral-0);
   transition: box-shadow 0.2s ease;
@@ -385,6 +392,10 @@
 
 /* Laptop — averages from scaled desktop + mobile */
 @media (max-width: 1439px) {
+  .sort-tabs + .salons {
+    margin-top: 26px;
+  }
+
   .salons > .container {
     gap: 26px;
   }
@@ -457,6 +468,10 @@
 
 /* Mobile — Figma 851:12173 / 800:14717, Swiper 320px cards */
 @media (max-width: 767px) {
+  .sort-tabs + .salons {
+    margin-top: 20px;
+  }
+
   .salons > .container {
     gap: 20px;
   }
@@ -469,6 +484,18 @@
     margin-inline: calc(-1 * var(--page-pad-x));
     width: calc(100% + 2 * var(--page-pad-x));
     overflow: hidden;
+  }
+
+  /* Catalog page — stack cards (no Swiper) */
+  .salons__list:not(.swiper-wrapper) {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .salons__list:not(.swiper-wrapper) .salon-card {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
   }
 
   .salons__list.swiper-wrapper {
@@ -573,8 +600,8 @@
     gap: 8px;
   }
 
-  .salon-card__btn-max,
-  .salon-card__btn-tg {
+  .salon-card__actions .salon-card__btn-max,
+  .salon-card__actions .salon-card__btn-tg {
     display: none;
   }
 

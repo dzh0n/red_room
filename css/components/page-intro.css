@@ -1,0 +1,130 @@
+/* Page intro — breadcrumbs + h1 for inner pages (Figma 3016:24180), scaled ~85% */
+
+.page-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 34px; /* Figma 40 */
+  padding-top: 28px;
+}
+
+.breadcrumbs {
+  width: 100%;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px; /* Figma 6 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-primary-700); /* #4c1414 */
+  font-family: var(--font-sans);
+  font-size: 13px; /* Figma 14 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  content: "";
+  flex-shrink: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--color-primary-700);
+}
+
+.breadcrumbs__link {
+  color: inherit;
+}
+
+.breadcrumbs__link:hover,
+.breadcrumbs__link:focus-visible {
+  color: var(--color-primary-500);
+  outline: none;
+}
+
+.breadcrumbs__current {
+  color: var(--color-primary-400); /* #984e4e */
+}
+
+.page-title {
+  margin: 0;
+  color: var(--color-primary-950); /* #190707 */
+  font-family: var(--font-display);
+  font-size: 58px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.page-title .section-help {
+  margin-left: 8px; /* Figma sits beside title */
+  vertical-align: middle;
+}
+
+/* Tighter gap to following section (like category-cards → popular) */
+.container:has(> .page-intro) + .section {
+  margin-top: 40px;
+}
+
+/* Laptop — averages of desktop / mobile */
+@media (max-width: 1439px) {
+  .page-intro {
+    gap: 25px; /* (34 + 16) / 2 */
+    padding-top: 26px; /* (28 + 24) / 2 */
+  }
+
+  .page-title {
+    font-size: 47px; /* (58 + 36) / 2 */
+  }
+
+  .container:has(> .page-intro) + .section {
+    margin-top: 32px; /* (40 + 24) / 2 */
+  }
+}
+
+/* Mobile — Figma 3017:24181 */
+@media (max-width: 767px) {
+  .page-intro {
+    gap: 16px; /* crumbs 20 → title */
+    padding-top: 24px; /* after 60px header */
+  }
+
+  .breadcrumbs__item {
+    font-size: 13px; /* Figma 14, same scale as desktop */
+  }
+
+  .page-title {
+    position: relative;
+    width: 100%;
+    min-height: 40px;
+    padding-right: 48px; /* 40 help + 8 gap */
+    font-size: 36px;
+  }
+
+  .page-title .section-help {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+  }
+
+  .page-title .section-help img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .container:has(> .page-intro) + .section {
+    margin-top: 24px;
+  }
+}

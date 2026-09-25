@@ -45,12 +45,29 @@
   width: 100%;
 }
 
-/* Keep readable pills — desktop scale media queries would shrink these */
+/* Same dark chrome as homepage — override .site-header--static light pills */
+.mobile-menu .site-header__meta {
+  color: var(--color-primary-300);
+}
+
 .mobile-menu .site-header__link {
   height: 48px;
   min-height: 48px;
   padding: 12px 16px;
   font-size: 16px;
+  background-color: rgba(10, 9, 9, 0.5); /* #0a090980 */
+  color: var(--color-primary-150);
+}
+
+.mobile-menu .site-header__link img,
+.mobile-menu .site-header__link:hover img,
+.mobile-menu .site-header__link.is-active img {
+  filter: none;
+}
+
+.mobile-menu .site-header__link:hover {
+  background-color: rgba(10, 9, 9, 0.9);
+  color: var(--color-primary-100);
 }
 
 .mobile-menu__nav .site-header__link.is-active {

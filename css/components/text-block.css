@@ -1,31 +1,56 @@
-/* Text block — desktop 738:9220 / mobile 800:15572 */
+/* Text block — card: Figma 587:6560, scaled ~85% */
 
 .text-block__content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  max-width: 1252px;
+  gap: 14px; /* Figma 16 */
+  box-sizing: border-box;
+  max-width: none;
+  padding: 28px; /* Figma 32 */
+  border-radius: var(--radius-md); /* 20 */
+  background-color: var(--color-neutral-0);
 }
 
-/* Desktop scaled: Mulish SemiBold 16 */
+.text-block .section-title {
+  margin: 0;
+}
+
+/* Figma Mulish Regular 18 → 15 */
 .text-block__text {
-  color: var(--color-neutral-500);
+  margin: 0;
+  color: var(--color-neutral-950);
   font-family: var(--font-sans);
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 400;
   line-height: 1.4;
 }
 
-/* Laptop: matches scaled desktop / mobile */
+/* Laptop — averages */
 @media (max-width: 1439px) {
+  .text-block__content {
+    gap: 13px;
+    padding: 24px;
+  }
+
   .text-block__text {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
-/* Mobile 375 — 800:15572: Mulish SemiBold 16 / 140% */
+/* Mobile — Figma 853:14642 */
 @media (max-width: 767px) {
+  .text-block__content {
+    gap: 14px; /* Figma 16 */
+    padding: 20px;
+  }
+
+  .text-block .section-title {
+    min-height: 0;
+    padding-right: 0;
+  }
+
+  /* Figma Mulish Regular 18 → 15 */
   .text-block__text {
-    font-size: 16px;
+    font-size: 15px;
   }
 }

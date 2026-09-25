@@ -12,7 +12,7 @@
   box-sizing: border-box;
   height: 52px;
   padding: 0 24px;
-  border: 1px solid var(--color-primary-150); /* #d8bcbc */
+  border: 0;
   border-radius: var(--radius-button);
   background-color: var(--color-neutral-950); /* #0a0909 */
   color: var(--color-primary-150); /* #d8bcbc */
@@ -24,7 +24,6 @@
   cursor: pointer;
   transition:
     background-color 0.15s ease,
-    border-color 0.15s ease,
     color 0.15s ease,
     opacity 0.15s ease;
 }
@@ -36,13 +35,11 @@
 }
 
 .btn-dark:hover {
-  border-color: transparent;
   background-color: var(--color-primary-700); /* #4c1414 */
   color: var(--color-neutral-0);
 }
 
 .btn-dark:active {
-  border-color: transparent;
   background-color: var(--color-primary-800); /* #320e0e */
   color: var(--color-primary-150);
 }
