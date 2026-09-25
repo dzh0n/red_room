@@ -1,5 +1,10 @@
 /* Private masseuses — desktop 738:9186 */
 
+/* Tighter gap after sort tabs (catalog page) */
+.sort-tabs + .private-masseuses {
+  margin-top: 32px;
+}
+
 .private-masseuses > .container {
   display: flex;
   flex-direction: column;
@@ -284,6 +289,10 @@
 
 /* Laptop — averages from scaled desktop + mobile */
 @media (max-width: 1439px) {
+  .sort-tabs + .private-masseuses {
+    margin-top: 26px;
+  }
+
   .private-masseuses > .container {
     gap: 26px;
   }
@@ -338,6 +347,10 @@
 
 /* Mobile — 851:12174 / card 800:15183 */
 @media (max-width: 767px) {
+  .sort-tabs + .private-masseuses {
+    margin-top: 20px;
+  }
+
   .private-masseuses > .container {
     gap: 20px;
   }
@@ -351,6 +364,19 @@
     margin-inline: calc(-1 * var(--page-pad-x));
     width: calc(100% + 2 * var(--page-pad-x));
     overflow: hidden;
+  }
+
+  /* Catalog page — stack cards (no Swiper) */
+  .private-masseuses__list:not(.swiper-wrapper) {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .private-masseuses__list:not(.swiper-wrapper) .girl-card {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
   }
 
   .private-masseuses__list.swiper-wrapper {
