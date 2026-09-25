@@ -4,10 +4,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 20px;
   box-sizing: border-box;
-  min-height: 54px;
-  padding: 12px var(--page-pad-x);
+  min-height: 48px;
+  padding: 10px var(--page-pad-x);
   background-color: var(--color-neutral-950);
   color: var(--color-neutral-0);
 }
@@ -18,12 +18,12 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding: 4px 16px;
+  padding: 4px 14px;
   border-radius: var(--radius-lg);
   background-color: var(--color-neutral-0);
   color: var(--color-neutral-950);
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -36,7 +36,7 @@
   margin: 0;
   color: var(--color-neutral-0);
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 1.4;
   text-align: center;

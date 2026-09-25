@@ -31,11 +31,11 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   box-sizing: border-box;
-  width: 396px;
+  width: 340px;
   max-width: 100%;
-  padding: 32px;
+  padding: 24px;
   border-radius: var(--radius-md); /* 20 */
   background-color: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(10px);
@@ -44,14 +44,14 @@
 
 .map-panel__icon {
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
 }
 
 .map-panel__body {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .map-panel__title-row {
@@ -63,7 +63,7 @@
 .map-panel__title {
   color: var(--color-neutral-950);
   font-family: var(--font-sans);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -71,7 +71,7 @@
 .map-panel__count {
   color: var(--color-neutral-200); /* #c8c5c5 */
   font-family: var(--font-sans);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -79,35 +79,35 @@
 .map-panel__desc {
   color: var(--color-neutral-400); /* #817979 */
   font-family: var(--font-sans);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
 }
 
-/* Laptop averages */
+/* Laptop averages from scaled desktop + mobile */
 @media (max-width: 1439px) {
   .map-panel {
-    width: 340px;
-    padding: 24px;
-    gap: 10px;
+    width: 300px;
+    padding: 20px;
+    gap: 8px;
   }
 
   .map-panel__icon {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
   }
 
   .map-panel__body {
-    gap: 10px;
+    gap: 8px;
   }
 
   .map-panel__title,
   .map-panel__count {
-    font-size: 21px;
+    font-size: 19px;
   }
 
   .map-panel__desc {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 

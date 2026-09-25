@@ -8,9 +8,9 @@ alwaysApply: true
 - Page sections are **universal blocks** — they can appear on any page, not only the homepage.
 - Build sections as self-contained, reusable markup/CSS (shared partials/components), not page-specific one-offs.
 - **Spacing between sections is always the same** — use `--section-gap` / `.section`. Do not invent per-page or per-block vertical gaps between sections.
-- Gap tokens (from Figma):
-  - desktop (`1920_main`): `140px`
+- Gap tokens (scaled ~85% from Figma):
+  - desktop: `100px`
   - mobile (`375_main`): `56px`
-  - laptop: `98px` — average of desktop and mobile
+  - laptop: `78px` — average of desktop and mobile
 - Exceptions only when the Figma frame explicitly groups blocks tighter (e.g. hero → first content). Confirm before diverging.
 - Prefer `margin`/`gap` from `--section-gap` on the section wrapper; do not hardcode gap values elsewhere.

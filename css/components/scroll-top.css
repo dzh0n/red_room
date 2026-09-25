@@ -1,0 +1,75 @@
+/* Scroll to top — circle button (Figma buttons / circle) */
+
+.scroll-top {
+  position: fixed;
+  right: var(--page-pad-x);
+  bottom: 24px;
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  border-radius: 56px;
+  background-color: var(--color-primary-70); /* #eadcdc */
+  color: var(--color-neutral-950);
+  line-height: 0;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition:
+    background-color 0.15s ease,
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+}
+
+.scroll-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.scroll-top:hover {
+  background-color: var(--color-primary-700);
+}
+
+.scroll-top:hover img {
+  filter: invert(1);
+}
+
+.scroll-top:active {
+  background-color: var(--color-primary-800);
+}
+
+.scroll-top:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 3px;
+}
+
+/* Lift above cookies bar when it is open */
+body.has-cookies-banner .scroll-top {
+  bottom: calc(24px + var(--cookies-banner-offset, 88px));
+}
+
+@media (max-width: 767px) {
+  .scroll-top {
+    width: 44px;
+    height: 44px;
+    bottom: 16px;
+  }
+
+  body.has-cookies-banner .scroll-top {
+    bottom: calc(16px + var(--cookies-banner-offset, 120px));
+  }
+}

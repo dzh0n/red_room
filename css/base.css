@@ -88,11 +88,11 @@ ol {
   margin-top: var(--section-gap);
 }
 
-/* Shared section heading — desktop 64 / laptop 44 / mobile 24 (Tenor Sans) */
+/* Shared section heading — desktop 48 / laptop 36 / mobile 24 (Tenor Sans) */
 .section-title {
   color: var(--color-heading-dark);
   font-family: var(--font-display);
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 400;
   line-height: normal;
 }
@@ -100,9 +100,9 @@ ol {
 /* Help (?) — inline at end of title; mobile: top-right of title block */
 .section-help {
   display: inline-block;
-  width: 40px;
-  height: 40px;
-  margin: 0 0 0 16px;
+  width: 36px;
+  height: 36px;
+  margin: 0 0 0 14px;
   padding: 0;
   border: 0;
   border-radius: 56px;
@@ -113,26 +113,26 @@ ol {
 
 .section-help img {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
 }
 
-/* Laptop: average section gap; tighter horizontal padding */
+/* Laptop: average of desktop + mobile; pad 24 */
 @media (max-width: 1439px) {
   :root {
-    --page-pad-x: 20px;
-    --section-gap: 98px; /* (140 + 56) / 2 */
+    --page-pad-x: 24px;
+    --section-gap: 78px; /* (100 + 56) / 2 */
   }
 
   .section-title {
-    font-size: 44px; /* (64 + 24) / 2 */
+    font-size: 36px; /* (48 + 24) / 2 */
   }
 }
 
 /* Mobile 375_main */
 @media (max-width: 767px) {
   :root {
-    --page-pad-x: 16px;
+    --page-pad-x: 15px;
     --section-gap: 56px;
   }
 

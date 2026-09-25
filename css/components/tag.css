@@ -5,13 +5,13 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 8px 16px;
+  padding: 6px 14px;
   border: 0;
   border-radius: var(--radius-pill);
   background-color: var(--color-primary-100);
   color: var(--color-primary-700);
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 1.4;
   white-space: nowrap;
@@ -51,15 +51,15 @@
  */
 .tag-tip {
   box-sizing: border-box;
-  width: 488px;
-  max-width: min(488px, calc(100vw - 32px));
-  padding: 20px;
+  width: 440px;
+  max-width: min(440px, calc(100vw - 32px));
+  padding: 16px;
   border-radius: var(--radius-lg);
   background-color: var(--color-neutral-0);
   box-shadow: var(--shadow-card);
   color: var(--color-primary-950);
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 1.4;
   white-space: normal;
@@ -85,23 +85,23 @@
   z-index: 1000;
   clip: auto;
   overflow: visible;
-  width: 488px;
-  max-width: min(488px, calc(100vw - 32px));
+  width: 440px;
+  max-width: min(440px, calc(100vw - 32px));
   height: auto;
   margin: 0;
   pointer-events: auto;
 }
 
-/* Laptop — averages of desktop / mobile tag */
+/* Laptop — averages of scaled desktop / mobile tag */
 @media (max-width: 1439px) {
   .tag {
-    padding: 6px 12px;
-    font-size: 14px; /* (16 + 13) / 2 ≈ 14.5 */
+    padding: 5px 10px;
+    font-size: 14px; /* (15 + 13) / 2 */
   }
 
   .tag-tip.is-open {
-    padding: 18px;
-    font-size: 15px;
+    padding: 16px;
+    font-size: 14px;
   }
 }
 

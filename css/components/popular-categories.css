@@ -3,8 +3,8 @@
 .popular-categories__card {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 24px;
+  gap: 16px;
+  padding: 20px;
   overflow: hidden;
   border-radius: var(--radius-md);
   background-color: var(--color-neutral-0);
@@ -20,7 +20,7 @@
   margin: 0;
   color: var(--color-neutral-950);
   font-family: var(--font-sans);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -28,7 +28,7 @@
 .popular-categories__count {
   color: var(--color-neutral-200);
   font-family: var(--font-sans);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -54,12 +54,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 16px;
+  padding: 6px 14px;
   border-radius: var(--radius-pill);
   background-color: var(--color-primary-50);
   color: var(--color-primary-700);
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 1.4;
   white-space: nowrap;
@@ -72,21 +72,21 @@
   outline: none;
 }
 
-/* Laptop — averages */
+/* Laptop — averages from scaled desktop + mobile */
 @media (max-width: 1439px) {
   .popular-categories__card {
-    gap: 16px;
-    padding: 20px;
+    gap: 14px;
+    padding: 16px;
   }
 
   .popular-categories__title,
   .popular-categories__count {
-    font-size: 21px;
+    font-size: 19px; /* (20 + 18) / 2 */
   }
 
   .popular-categories__link {
-    padding: 6px 12px;
-    font-size: 14px; /* (16 + 13) / 2 ≈ 14.5 */
+    padding: 5px 10px;
+    font-size: 14px; /* (15 + 13) / 2 */
   }
 }
 

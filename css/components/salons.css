@@ -3,13 +3,13 @@
 .salons > .container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 32px;
 }
 
 .salons__list {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
 }
 
 .salons__slider {
@@ -35,70 +35,10 @@
   justify-content: center;
 }
 
-/* Outline CTA (Max / Telegram on salon cards) */
-.btn-outline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  box-sizing: border-box;
-  height: 64px;
-  padding: 0 32px;
-  border: 1px solid var(--color-neutral-950);
-  border-radius: var(--radius-button);
-  background: transparent;
-  color: var(--color-neutral-950);
-  font-family: var(--font-sans);
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.4;
-  white-space: nowrap;
-  transition: opacity 0.15s ease;
-}
-
-.btn-outline img {
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-}
-
-.btn-outline:hover {
-  opacity: 0.85;
-}
-
-/* Icon-only circular CTA (mobile call / Telegram) */
-.btn-icon {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 48px;
-  height: 48px;
-  padding: 0;
-  border: 1px solid var(--color-neutral-950);
-  border-radius: var(--radius-button);
-  background: var(--color-neutral-0);
-  line-height: 0;
-  transition: opacity 0.15s ease;
-}
-
-.btn-icon img {
-  width: 20px;
-  height: 20px;
-}
-
-.btn-icon img[src*="telegram"] {
-  width: 21px;
-}
-
-.btn-icon:hover {
-  opacity: 0.85;
-}
-
-/* Salon card — 1680×564, photo 539×564, radius 20 */
+/* Salon card — scaled photo/content */
 .salon-card {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   overflow: hidden;
   min-width: 0;
   border-radius: var(--radius-md);
@@ -114,8 +54,8 @@
 
 .salon-card__photo {
   flex-shrink: 0;
-  width: 539px;
-  height: 564px;
+  width: 460px;
+  height: 480px;
   overflow: hidden;
 }
 
@@ -130,15 +70,15 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
   min-width: 0;
-  padding: 32px;
+  padding: 24px;
 }
 
 .salon-card__head {
   display: flex;
   align-items: flex-start;
-  gap: 32px;
+  gap: 24px;
 }
 
 .salon-card__title {
@@ -153,14 +93,14 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 20px 48px;
+  gap: 16px 36px;
 }
 
 .salon-card__name {
   margin: 0;
   color: var(--color-neutral-950);
   font-family: var(--font-sans);
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -191,14 +131,14 @@
 
 .salon-card__score {
   color: var(--color-neutral-500);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.4;
 }
 
 .salon-card__reviews {
   color: var(--color-primary-500);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -213,7 +153,7 @@
   align-items: center;
   gap: 8px;
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -228,8 +168,8 @@
 
 .salon-card__fav {
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   margin: 0;
   padding: 0;
   border: 0;
@@ -238,8 +178,8 @@
 }
 
 .salon-card__fav img {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
 }
 
 .salon-card__contacts {
@@ -254,7 +194,7 @@
   gap: 12px;
   margin: 0;
   color: var(--color-neutral-950);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -276,7 +216,7 @@
 .salon-card__desc {
   margin: 0;
   color: var(--color-neutral-950);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -375,7 +315,7 @@
   position: relative;
   z-index: 1;
   color: var(--color-primary-100);
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -388,56 +328,85 @@
   margin-top: auto;
 }
 
-/* Figma 738:9180 buttons — height 64; chevron 24; Max/Telegram icons 20 */
+/* Buttons — height 40 (aligned with girl-card) */
 .salon-card__actions .btn-dark,
 .salon-card__actions .btn-outline {
   box-sizing: border-box;
-  height: 64px;
-  min-height: 64px;
-  padding: 0 32px;
-  gap: 12px;
-  font-size: 20px;
+  height: 40px;
+  min-height: 40px;
+  padding: 0 24px;
+  gap: 6px;
+  font-size: 14px;
   line-height: 1.4;
 }
 
-.salon-card__actions .btn-dark img {
-  width: 24px;
-  height: 24px;
+/* Outline / icon: light fill + invert on hover (unlike page .btn-outline) */
+.salon-card__actions .btn-outline,
+.salon-card__actions .btn-icon {
+  border-color: var(--color-neutral-950);
+  background-color: var(--color-neutral-0);
+  color: var(--color-neutral-950);
 }
 
-.salon-card__actions .btn-outline img {
+.salon-card__actions .btn-outline:hover,
+.salon-card__actions .btn-icon:hover {
+  border-color: transparent;
+  background-color: var(--color-neutral-950);
+  color: var(--color-neutral-0); /* match inverted icon */
+}
+
+.salon-card__actions .btn-outline:active,
+.salon-card__actions .btn-icon:active {
+  border-color: transparent;
+  background-color: var(--color-primary-800);
+  color: var(--color-neutral-0);
+}
+
+.salon-card__actions .btn-outline:hover img,
+.salon-card__actions .btn-icon:hover img,
+.salon-card__actions .btn-outline:active img,
+.salon-card__actions .btn-icon:active img {
+  filter: invert(1);
+}
+
+.salon-card__actions .btn-dark img {
   width: 20px;
   height: 20px;
 }
 
-.salon-card__actions .btn-outline img[src*="telegram"] {
-  width: 21px;
+.salon-card__actions .btn-outline img {
+  width: 16px;
+  height: 16px;
 }
 
-/* Laptop — averages */
+.salon-card__actions .btn-outline img[src*="telegram"] {
+  width: 18px;
+}
+
+/* Laptop — averages from scaled desktop + mobile */
 @media (max-width: 1439px) {
   .salons > .container {
-    gap: 28px;
+    gap: 26px;
   }
 
   .salons__list {
-    gap: 24px;
+    gap: 20px;
   }
 
   .salon-card__photo {
-    width: 400px;
+    width: 360px;
     height: auto;
     align-self: stretch;
-    min-height: 420px;
+    min-height: 360px;
   }
 
   .salon-card__content {
-    gap: 24px;
-    padding: 24px;
+    gap: 20px;
+    padding: 20px;
   }
 
   .salon-card__name {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .salon-card__meta,
@@ -445,31 +414,31 @@
   .salon-card__desc,
   .salon-card__score,
   .salon-card__reviews {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .btn-outline {
-    height: 56px;
-    padding: 0 24px;
-    font-size: 17px;
+    height: 40px;
+    padding: 0 16px;
+    font-size: 14px;
   }
 
   .salon-card__actions .btn-dark,
   .salon-card__actions .btn-outline {
-    height: 56px;
-    min-height: 56px;
+    height: 40px;
+    min-height: 40px;
     padding: 0 24px;
-    font-size: 17px;
+    font-size: 14px;
   }
 
   .salon-card__actions .btn-dark img {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
   }
 
   .salon-card__actions .btn-outline img {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -572,13 +541,13 @@
   }
 
   .salon-card__fav {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
   }
 
   .salon-card__fav img {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
   }
 
   .salon-card__row {
@@ -618,10 +587,10 @@
     flex: 1 1 auto;
     width: auto;
     min-width: 0;
-    height: 48px;
-    min-height: 48px;
-    padding: 0 16px;
-    gap: 8px;
+    height: 40px;
+    min-height: 40px;
+    padding: 0 24px;
+    gap: 6px;
     font-size: 14px;
   }
 

@@ -7,19 +7,19 @@
   max-width: 1252px;
 }
 
-/* Desktop: Mulish SemiBold 18 / 140%, #615858 */
+/* Desktop scaled: Mulish SemiBold 16 */
 .text-block__text {
   color: var(--color-neutral-500);
   font-family: var(--font-sans);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.4;
 }
 
-/* Laptop: average of desktop 18 / mobile 16 */
+/* Laptop: matches scaled desktop / mobile */
 @media (max-width: 1439px) {
   .text-block__text {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 

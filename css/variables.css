@@ -73,16 +73,16 @@
   --space-20: 80px;
   --space-30: 120px;
 
-  /* Layout — desktop 1920 */
+  /* Layout — container max 1540 (content 1510 + pad 15×2) */
   --page-max: 1920px;
-  --content-max: 1680px;
-  --page-pad-x: 120px;
+  --content-max: 1510px;
+  --page-pad-x: 15px;
 
   /*
    * Uniform gap between reusable page sections
-   * desktop 1920_main: 140px | mobile 375_main: 56px | laptop: average
+   * scaled desktop: 100px | mobile 375_main: 56px | laptop: average
    */
-  --section-gap: 140px;
+  --section-gap: 100px;
 
   /* Typography families */
   --font-sans: "Mulish", sans-serif;

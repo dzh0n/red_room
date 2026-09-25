@@ -3,13 +3,13 @@
 .private-masseuses > .container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 32px;
 }
 
 .private-masseuses__list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px;
+  gap: 24px;
 }
 
 .private-masseuses__slider {
@@ -36,71 +36,12 @@
   gap: 10px;
 }
 
-/* Dark CTA buttons (catalog) */
-.btn-dark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  box-sizing: border-box;
-  height: 64px;
-  padding: 0 32px;
-  border: 0;
-  border-radius: var(--radius-button);
-  background-color: var(--color-neutral-950); /* #0a0909 */
-  color: var(--color-primary-150); /* #d8bcbc */
-  font-family: var(--font-sans);
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.4;
-  white-space: nowrap;
-  transition: opacity 0.15s ease;
-}
-
-.btn-dark img {
-  flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-}
-
-.btn-dark:hover {
-  opacity: 0.9;
-}
-
-.btn-dark__muted {
-  color: var(--color-primary-350); /* #ab6f6f — count in parens */
-}
-
-.btn-dark--sm {
-  height: 52px;
-  padding: 0 20px;
-  gap: 8px;
-  font-size: 16px;
-}
-
-.btn-dark--sm img {
-  width: 16px;
-  height: 16px;
-}
-
-.private-masseuses__link {
-  color: var(--color-primary-500); /* #7e2222 */
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.4;
-  text-align: center;
-}
-
-.private-masseuses__link:hover {
-  text-decoration: underline;
-}
-
-/* Girl card — 824×375, photo 324×375, radius 20 */
+/* Girl card — scaled ~85% */
 .girl-card {
   display: flex;
   overflow: hidden;
   min-width: 0;
-  height: 375px;
+  height: 320px;
   border-radius: var(--radius-md); /* 20px */
   background-color: var(--color-neutral-0); /* #ffffff */
   transition: box-shadow 0.2s ease;
@@ -115,8 +56,8 @@
 .girl-card__photo {
   position: relative;
   flex-shrink: 0;
-  width: 324px;
-  height: 375px;
+  width: 276px;
+  height: 320px;
   overflow: hidden;
   background-color: var(--color-primary-100);
 }
@@ -140,12 +81,12 @@
 .girl-badge {
   display: inline-flex;
   align-items: center;
-  padding: 4px 12px;
+  padding: 4px 10px;
   border-radius: 32px;
   background-color: rgba(126, 34, 34, 0.8); /* #7e2222cc */
   color: var(--color-primary-50); /* #f2e8e8 */
   font-family: var(--font-sans);
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 700;
   line-height: 1.4;
 }
@@ -164,12 +105,12 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 4px 12px;
+  padding: 4px 10px;
   border-radius: 32px;
   background-color: rgba(10, 9, 9, 0.7); /* #0a0909b2 */
   color: var(--color-primary-50); /* #f2e8e8 */
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -184,9 +125,9 @@
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   min-width: 0;
-  padding: 24px;
+  padding: 20px;
 }
 
 .girl-card__head {
@@ -218,14 +159,14 @@
   margin: 0;
   color: var(--color-neutral-950);
   font-family: var(--font-sans);
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   line-height: 1.4;
 }
 
 .girl-card__price {
   color: var(--color-neutral-950);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.4;
   white-space: nowrap;
@@ -240,16 +181,16 @@
 }
 
 .girl-card__fav img {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
 }
 
 .girl-card__loc {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   color: var(--color-neutral-950);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -290,11 +231,18 @@
   gap: 12px;
 }
 
+.girl-card__actions .btn-dark--sm {
+  height: 40px;
+  padding: 0 16px;
+  gap: 6px;
+  font-size: 14px;
+}
+
 .girl-card__social {
   display: flex;
   flex-shrink: 0;
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   padding: 0;
   border: 0;
   border-radius: 10px;
@@ -303,15 +251,15 @@
 }
 
 .girl-card__social img {
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
 }
 
 .girl-card__desc {
   display: -webkit-box;
   overflow: hidden;
   color: var(--color-neutral-500);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.4;
   -webkit-box-orient: vertical;
@@ -322,14 +270,26 @@
   margin-top: auto;
 }
 
-/* Laptop — averages between desktop and mobile */
+.girl-card__footer .btn-dark {
+  height: 40px;
+  padding: 0 24px;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.girl-card__footer .btn-dark img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Laptop — averages from scaled desktop + mobile */
 @media (max-width: 1439px) {
   .private-masseuses > .container {
-    gap: 28px;
+    gap: 26px;
   }
 
   .private-masseuses__list {
-    gap: 20px;
+    gap: 18px;
   }
 
   .girl-card {
@@ -338,31 +298,31 @@
   }
 
   .girl-card__photo {
-    width: 260px;
+    width: 240px;
     height: auto;
     align-self: stretch;
   }
 
   .girl-card__content {
-    gap: 16px;
-    padding: 20px;
+    gap: 14px;
+    padding: 16px;
   }
 
   .girl-card__name {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .girl-card__price {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .girl-card__desc {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .btn-dark {
-    height: 56px;
-    font-size: 17px;
+    height: 50px;
+    font-size: 16px;
   }
 }
 
@@ -469,6 +429,9 @@
 
   .girl-card__footer .btn-dark {
     width: 100%;
+    height: 40px;
+    padding: 0 24px;
+    font-size: 14px;
   }
 
   .btn-dark {
@@ -485,9 +448,13 @@
 
   .btn-dark--sm {
     width: auto;
-    height: 48px;
+    height: 40px;
     padding: 0 16px;
     font-size: 14px;
+  }
+
+  .girl-card__actions .btn-dark--sm {
+    height: 40px;
   }
 
   .btn-dark--sm img {

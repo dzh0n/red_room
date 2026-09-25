@@ -1,0 +1,198 @@
+/* Button states — Figma component set `buttons` (5:330)
+   filed/primary → .btn-dark
+   lined/neutral → .btn-outline, .btn-icon
+   link/primary  → .btn-link
+*/
+
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+  height: 52px;
+  padding: 0 24px;
+  border: 1px solid var(--color-primary-150); /* #d8bcbc */
+  border-radius: var(--radius-button);
+  background-color: var(--color-neutral-950); /* #0a0909 */
+  color: var(--color-primary-150); /* #d8bcbc */
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.btn-dark img {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+}
+
+.btn-dark:hover {
+  border-color: transparent;
+  background-color: var(--color-primary-700); /* #4c1414 */
+  color: var(--color-neutral-0);
+}
+
+.btn-dark:active {
+  border-color: transparent;
+  background-color: var(--color-primary-800); /* #320e0e */
+  color: var(--color-primary-150);
+}
+
+.btn-dark:disabled,
+.btn-dark[aria-disabled="true"] {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
+}
+
+.btn-dark__muted {
+  color: var(--color-primary-350); /* #ab6f6f — count in parens */
+}
+
+.btn-dark--sm {
+  height: 52px;
+  padding: 0 20px;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.btn-dark--sm img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Outline — lined / neutral (light surfaces) */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+  height: 52px;
+  padding: 0 24px;
+  border: 1px solid var(--color-neutral-950);
+  border-radius: var(--radius-button);
+  background: transparent;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.btn-outline img {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.btn-outline:hover {
+  border-color: var(--color-primary-700); /* #4c1414 */
+  color: var(--color-primary-700);
+}
+
+.btn-outline:active {
+  border-color: var(--color-neutral-950);
+  color: var(--color-neutral-950);
+}
+
+.btn-outline.is-active {
+  border-color: transparent;
+  background-color: var(--color-neutral-950);
+  color: var(--color-primary-150);
+}
+
+.btn-outline:disabled,
+.btn-outline[aria-disabled="true"] {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Icon-only circular CTA */
+.btn-icon {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid var(--color-neutral-950);
+  border-radius: var(--radius-button);
+  background: var(--color-neutral-0);
+  line-height: 0;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.btn-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-icon img[src*="telegram"] {
+  width: 21px;
+}
+
+.btn-icon:hover {
+  border-color: var(--color-primary-700);
+}
+
+.btn-icon:active {
+  border-color: var(--color-neutral-950);
+}
+
+.btn-icon:disabled,
+.btn-icon[aria-disabled="true"] {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Text link — link / primary */
+.btn-link {
+  color: var(--color-primary-500); /* #7e2222 */
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-link:hover {
+  color: var(--color-primary-700); /* #4c1414 */
+  text-decoration: underline;
+}
+
+.btn-link:active {
+  color: var(--color-primary-600); /* #5e1919 */
+  text-decoration: underline;
+}
+
+.btn-link:disabled,
+.btn-link[aria-disabled="true"] {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
+}
