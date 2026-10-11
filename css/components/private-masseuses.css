@@ -60,11 +60,14 @@
 
 .girl-card__photo {
   position: relative;
+  display: block;
   flex-shrink: 0;
   width: 276px;
   height: 320px;
   overflow: hidden;
   background-color: var(--color-primary-100);
+  color: inherit;
+  text-decoration: none;
 }
 
 .girl-card__photo img {

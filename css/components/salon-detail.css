@@ -1,0 +1,1687 @@
+/* Salon detail hero — gallery + info (Figma 3005:25827), scaled ~85% */
+
+.salon-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px; /* Figma ~35 */
+}
+
+/* —— Gallery —— */
+.salon-detail__gallery {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 10px; /* Figma ~12 */
+  width: 456px; /* Figma 536 */
+}
+
+.salon-detail__main {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 536 / 569;
+  overflow: hidden;
+  border-radius: var(--radius-md); /* 20 */
+  background-color: var(--color-neutral-150);
+}
+
+.salon-detail__main .swiper-wrapper,
+.salon-detail__main .swiper-slide {
+  height: 100%;
+}
+
+.salon-detail__main .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.salon-detail__nav {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px; /* Figma 40 */
+  height: 34px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 56px;
+  background-color: var(--color-primary-70); /* #eadcdc */
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+
+.salon-detail__nav:hover {
+  background-color: var(--color-primary-100);
+}
+
+.salon-detail__nav.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.salon-detail__nav img {
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+}
+
+.salon-detail__nav--prev {
+  left: 17px;
+}
+
+.salon-detail__nav--next {
+  right: 17px;
+}
+
+.salon-detail__nav--prev img {
+  transform: rotate(180deg);
+}
+
+.salon-detail__thumbs {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.salon-detail__thumbs .swiper-slide {
+  box-sizing: border-box;
+  height: auto;
+  aspect-ratio: 125 / 146;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm); /* 12 */
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.salon-detail__thumbs .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.salon-detail__thumbs .swiper-slide-thumb-active {
+  border-color: var(--color-primary-500);
+}
+
+.salon-detail__thumbs .swiper-slide:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* —— Info card —— */
+.salon-detail__info {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 14px; /* Figma 16 */
+  min-width: 0;
+  padding: 28px; /* Figma 32 */
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-surface);
+}
+
+.salon-detail__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-bottom: 10px; /* Figma title pad-bottom 12 */
+}
+
+.salon-detail__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px; /* Figma 16 */
+}
+
+.salon-detail__title-block {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+}
+
+.salon-detail__eyebrow {
+  margin: 0;
+  color: var(--color-neutral-350); /* #989292 */
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-detail__name {
+  margin: 0;
+  color: var(--color-primary-950); /* #190707 */
+  font-family: var(--font-display);
+  font-size: 68px; /* Figma 80 */
+  font-weight: 400;
+  line-height: normal;
+}
+
+.salon-detail__lead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 17px; /* Figma 20 */
+  margin: 0;
+}
+
+.salon-detail__service {
+  color: var(--color-neutral-950);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-detail__site {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px; /* Figma 8 */
+  color: var(--color-primary-500); /* #7e2222 */
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-detail__site:hover {
+  text-decoration: underline;
+}
+
+.salon-detail__site img {
+  width: 17px;
+  height: 17px;
+}
+
+.salon-detail__fav {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.salon-detail__fav img {
+  width: 28px;
+  height: 28px;
+}
+
+.salon-detail__rating {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 17px; /* Figma 20 */
+}
+
+.salon-detail__stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* Figma 12 */
+}
+
+.salon-detail__stars-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px; /* Figma 4 */
+}
+
+.salon-detail__stars-icons img {
+  width: 17px; /* Figma 20 */
+  height: 17px;
+}
+
+.salon-detail__score {
+  color: var(--color-neutral-500); /* #615858 */
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-detail__reviews {
+  color: var(--color-primary-500);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-detail__reviews:hover {
+  text-decoration: underline;
+}
+
+.salon-detail__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px; /* Figma 8 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.salon-detail__chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px; /* Figma 8 / 16 */
+  border-radius: var(--radius-pill);
+  background-color: var(--color-primary-50); /* #f2e8e8 */
+  color: var(--color-primary-700); /* #4c1414 */
+  font-size: 14px; /* Figma 16 */
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.salon-detail__facts {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* Figma 16 */
+}
+
+.salon-detail__facts-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px; /* Figma 16 */
+}
+
+.salon-detail__fact {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Figma 6 */
+  padding: 14px; /* Figma 16 */
+  border-radius: 14px; /* Figma 16 */
+  background-color: var(--color-primary-50);
+}
+
+.salon-detail__fact-label {
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.salon-detail__fact-value {
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.salon-detail__fact-value--link {
+  color: var(--color-neutral-950);
+}
+
+.salon-detail__fact-value--link:hover {
+  color: var(--color-primary-500);
+  text-decoration: underline;
+}
+
+.salon-detail__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px; /* Figma 6 */
+  color: var(--color-neutral-950);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.salon-detail__status::before {
+  content: "";
+  flex-shrink: 0;
+  width: 7px; /* Figma 8 */
+  height: 7px;
+  border-radius: 50%;
+  background-color: #27ae60;
+}
+
+.salon-detail__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px; /* Figma 12 */
+  padding-top: 6px; /* Figma pad-top 20 − gap already in card */
+}
+
+.salon-detail__actions .btn-outline,
+.salon-detail__actions .btn-dark {
+  gap: 10px; /* Figma 12 → ~10 */
+}
+
+.salon-detail__actions .btn-outline img,
+.salon-detail__actions .btn-dark img {
+  width: 20px;
+  height: 20px;
+}
+
+/* —— Girl / masseuse detail hero (Figma 3009:28911) —— */
+.salon-detail--girl .salon-detail__main {
+  aspect-ratio: 536 / 727;
+}
+
+.salon-detail--private .salon-detail__name {
+  font-size: 40px; /* Figma 48 */
+}
+
+.salon-detail__media-stats {
+  z-index: 2;
+}
+
+.salon-detail__thumb--video {
+  position: relative;
+}
+
+.salon-detail__thumb--video::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4); /* Figma #00000066 */
+  pointer-events: none;
+}
+
+.salon-detail__thumb-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px; /* Figma 40 × 0.85 */
+  height: 34px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.salon-detail__thumb-play img {
+  display: block;
+  width: 34px;
+  height: 34px;
+}
+
+/* Breadcrumbs-only intro on detail pages */
+.page-intro--crumbs-only {
+  gap: 0;
+}
+
+.container:has(> .page-intro--crumbs-only) + .section {
+  margin-top: 28px;
+}
+
+/* Laptop — averages of desktop / mobile */
+@media (max-width: 1439px) {
+  .salon-detail {
+    gap: 22px; /* (30 + 14) / 2 */
+  }
+
+  .salon-detail__gallery {
+    width: 380px;
+  }
+
+  .salon-detail__info {
+    padding: 24px;
+    gap: 14px;
+  }
+
+  .salon-detail__name {
+    font-size: 52px; /* (68 + 36) / 2 */
+  }
+
+  .salon-detail--private .salon-detail__name {
+    font-size: 36px; /* (40 + 32) / 2 */
+  }
+
+  .salon-detail__facts-row {
+    gap: 12px;
+  }
+
+  .salon-detail__facts {
+    gap: 12px;
+  }
+}
+
+/* Tablet stack */
+@media (max-width: 1023px) {
+  .salon-detail {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .salon-detail__gallery {
+    width: 100%;
+    max-width: none;
+  }
+
+  .salon-detail__info {
+    width: 100%;
+  }
+}
+
+/* Mobile — Figma 3006:25831 (375) */
+@media (max-width: 767px) {
+  .container:has(> .page-intro--crumbs-only) + .section {
+    margin-top: 20px;
+  }
+
+  .salon-detail {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px; /* thumbs→info ~16; main→thumbs ~8 handled in gallery */
+  }
+
+  .salon-detail__gallery {
+    width: 100%;
+    gap: 8px; /* Figma main→thumbs */
+  }
+
+  .salon-detail__main {
+    aspect-ratio: 343 / 364;
+  }
+
+  .salon-detail__nav {
+    width: 40px; /* Figma 40 */
+    height: 40px;
+  }
+
+  .salon-detail__nav img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .salon-detail__nav--prev {
+    left: 12px;
+  }
+
+  .salon-detail__nav--next {
+    right: 12px;
+  }
+
+  .salon-detail__thumbs {
+    margin-inline: calc(-1 * var(--page-pad-x));
+    width: calc(100% + 2 * var(--page-pad-x));
+  }
+
+  .salon-detail__thumbs .swiper-slide {
+    width: 125px; /* Figma 125 — bleed + scroll */
+  }
+
+  .salon-detail__info {
+    width: 100%;
+    gap: 14px; /* Figma 16 */
+    padding: 17px; /* Figma 20 → ~85% */
+  }
+
+  .salon-detail__intro {
+    gap: 4px; /* Figma */
+    padding-bottom: 0;
+  }
+
+  .salon-detail__name {
+    font-size: 36px; /* Figma 36 */
+  }
+
+  .salon-detail__eyebrow,
+  .salon-detail__service,
+  .salon-detail__site,
+  .salon-detail__score,
+  .salon-detail__reviews {
+    font-size: 15px; /* Figma 18 */
+  }
+
+  .salon-detail__lead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px; /* Figma 16 */
+  }
+
+  .salon-detail__site {
+    padding-block: 5px; /* Figma pad 6 */
+  }
+
+  .salon-detail__stars-icons img {
+    width: 17px;
+    height: 17px;
+  }
+
+  .salon-detail__chip {
+    padding: 7px 14px;
+    font-size: 14px; /* Figma 16 */
+  }
+
+  .salon-detail__facts {
+    gap: 7px; /* Figma 8 */
+  }
+
+  /* Address / phone / price / status — full width */
+  .salon-detail__facts-row:nth-child(-n + 2) {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  /* District / rooms / masters / programs — 2 cols */
+  .salon-detail__facts-row:nth-child(n + 3) {
+    grid-template-columns: 1fr 1fr;
+    gap: 7px; /* Figma 8 */
+  }
+
+  .salon-detail__fact {
+    padding: 14px; /* Figma 16 */
+    border-radius: 14px;
+  }
+
+  .salon-detail__fact-label,
+  .salon-detail__fact-value,
+  .salon-detail__status {
+    font-size: 14px; /* Figma 16 */
+  }
+
+  .salon-detail__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px; /* Figma 12 */
+    padding-top: 6px;
+  }
+
+  .salon-detail__actions .btn-outline,
+  .salon-detail__actions .btn-dark {
+    width: 100%;
+    height: 48px; /* Figma 375 button */
+    padding: 0 16px;
+    gap: 8px;
+    font-size: 16px;
+  }
+
+  .salon-detail__actions .btn-outline img,
+  .salon-detail__actions .btn-dark img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Girl detail mobile — Figma 3010:28912 */
+  .salon-detail--girl {
+    gap: 16px; /* thumbs → info */
+  }
+
+  .salon-detail--girl .salon-detail__main {
+    aspect-ratio: 343 / 466;
+  }
+
+  .salon-detail--girl .salon-detail__info {
+    padding: 20px; /* Figma 375 */
+  }
+
+  .salon-detail--girl .salon-detail__fav,
+  .salon-detail--girl .salon-detail__fav img {
+    width: 32px; /* Figma 375 */
+    height: 32px;
+  }
+
+  /* Salon girl: salon/price stack; other params in 2 cols */
+  .salon-detail--girl:not(.salon-detail--private)
+    .salon-detail__facts-row:first-child {
+    grid-template-columns: 1fr;
+  }
+
+  .salon-detail--girl .salon-detail__facts-row:not(:first-child) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Private masseuse: all fact rows stay 2 cols */
+  .salon-detail--private .salon-detail__facts-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* —— About + amenities (Figma 517:5272), scaled ~85% —— */
+.salon-about__card {
+  display: flex;
+  flex-direction: column;
+  gap: 34px; /* Figma 40 */
+  box-sizing: border-box;
+  padding: 28px; /* Figma 32 */
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-surface);
+}
+
+.salon-about__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* Figma 16 */
+}
+
+.salon-about__intro .section-title {
+  margin: 0;
+}
+
+.salon-about__text {
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.salon-about__amenities {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* Figma 16 */
+}
+
+.salon-about__subtitle {
+  margin: 0;
+  color: var(--color-primary-900); /* #260a0a */
+  font-family: var(--font-sans);
+  font-size: 20px; /* Figma 24 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-about__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Figma 8 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.salon-about__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px; /* Figma 16 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.salon-about__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Figma 12 */
+  min-width: 0;
+  padding: 14px; /* Figma 16 */
+  border-radius: 14px; /* Figma 16 */
+  background-color: var(--color-primary-50); /* #f2e8e8 */
+}
+
+.salon-about__item img {
+  display: block;
+  width: 28px; /* Figma 32 */
+  height: 28px;
+}
+
+.salon-about__item span {
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+@media (max-width: 1439px) {
+  .salon-about__card {
+    gap: 30px; /* (34 + 27) / 2 */
+    padding: 24px;
+  }
+
+  .salon-about__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .salon-about__subtitle {
+    font-size: 18px; /* (20 + 17) / 2 */
+  }
+}
+
+/* Mobile — Figma 853:16071 / girl about 860:19158 */
+@media (max-width: 767px) {
+  .salon-about__card {
+    width: 100%;
+    gap: 32px; /* Figma 375 */
+    padding: 32px 20px; /* Figma 375 */
+  }
+
+  .salon-about__intro {
+    gap: 16px; /* Figma 375 */
+  }
+
+  .salon-about__text {
+    font-size: 14px;
+  }
+
+  .salon-about__amenities {
+    gap: 16px; /* Figma 375 */
+  }
+
+  .salon-about__subtitle {
+    font-size: 20px; /* Figma 24 → ~85% */
+  }
+
+  .salon-about__tags {
+    gap: 8px; /* Figma 375 */
+  }
+
+  .salon-about__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px; /* Figma 8 */
+  }
+
+  .salon-about__item {
+    gap: 8px; /* Figma 8 */
+    padding: 14px; /* Figma 16 */
+    border-radius: 14px;
+  }
+
+  .salon-about__item img {
+    width: 28px; /* Figma 32 → ~85% */
+    height: 28px;
+  }
+
+  .salon-about__item span {
+    font-size: 14px; /* Figma 14 */
+  }
+}
+
+/* —— Salon girls slider (Figma 517:6368), scaled ~85% —— */
+.salon-girls > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 34px; /* Figma 40 */
+}
+
+.salon-girls .section-title {
+  margin: 0;
+}
+
+.salon-girls__slider {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.salon-girls__list {
+  display: flex;
+}
+
+.salon-girl {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 395 / 575;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background-color: var(--color-neutral-150);
+}
+
+.salon-girl.swiper-slide {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 395 / 575;
+  margin: 0;
+}
+
+.salon-girl__media {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.salon-girl__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.salon-girl__head {
+  position: absolute;
+  top: 14px; /* Figma 16 */
+  right: 14px;
+  left: 14px;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.salon-girl__labels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+}
+
+.salon-girl__name {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 4px 10px 5px; /* Figma 4 / 12 / 6 */
+  border-radius: 40px;
+  background-color: var(--color-primary-50); /* #f2e8e8 */
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 20px; /* Figma 24 */
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.salon-girl__badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.salon-girl__fav {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Figma 48 */
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 40px;
+  background-color: var(--color-primary-50);
+  line-height: 0;
+  cursor: pointer;
+}
+
+.salon-girl__fav img {
+  width: 28px; /* Figma 32 */
+  height: 28px;
+}
+
+.salon-girl .girl-card__stats {
+  z-index: 1;
+}
+
+.salon-girls__more {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1439px) {
+  .salon-girls > .container {
+    gap: 28px;
+  }
+
+  .salon-girl__name {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .salon-girls > .container {
+    gap: 24px; /* Figma 375: title → slider */
+  }
+
+  .salon-girls__slider {
+    margin-inline: calc(-1 * var(--page-pad-x));
+    width: calc(100% + 2 * var(--page-pad-x));
+  }
+
+  .salon-girl,
+  .salon-girl.swiper-slide {
+    width: 320px; /* Figma 375 card */
+    height: 476px;
+    aspect-ratio: auto;
+  }
+
+  .salon-girl__head {
+    top: 8px;
+    right: 8px;
+    left: 8px;
+  }
+
+  /* Mobile Figma: badges only, no name pill */
+  .salon-girl__name {
+    display: none;
+  }
+
+  .salon-girl__fav {
+    width: 48px; /* Figma 375 */
+    height: 48px;
+  }
+
+  .salon-girl__fav img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .salon-girl .girl-card__stats {
+    bottom: 8px;
+    left: 8px;
+  }
+
+  .salon-girls__more .btn-dark {
+    width: 100%;
+    height: 48px; /* Figma 375 button */
+  }
+}
+
+/* —— Programs & prices (Figma 519:7136), scaled ~85% —— */
+.salon-programs__card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* Figma 16 */
+  box-sizing: border-box;
+  padding: 28px; /* Figma 32 */
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-surface);
+}
+
+.salon-programs__card .section-title {
+  margin: 0;
+}
+
+.salon-programs__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.salon-programs__row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  gap: 0;
+  box-sizing: border-box;
+  padding: 17px 0; /* Figma 20 */
+  border-bottom: 1px solid var(--color-primary-150); /* #d8bcbc */
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 20px; /* Figma 24 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-programs__row:last-child {
+  border-bottom: none;
+}
+
+.salon-programs__name,
+.salon-programs__duration,
+.salon-programs__price {
+  min-width: 0;
+}
+
+/* Girl detail — Figma 586:4461 (name + desc | duration + price) */
+.salon-programs__row:has(.salon-programs__info) {
+  grid-template-columns: 1fr 1fr;
+}
+
+.salon-programs__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Figma 8 */
+  min-width: 0;
+}
+
+.salon-programs__desc {
+  color: var(--color-neutral-400); /* #817979 */
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.salon-programs__meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-width: 0;
+}
+
+@media (max-width: 1439px) {
+  .salon-programs__card {
+    gap: 12px;
+    padding: 22px;
+  }
+
+  .salon-programs__row {
+    padding: 14px 0;
+    font-size: 17px;
+  }
+
+  .salon-programs__desc {
+    font-size: 14px;
+  }
+}
+
+/* Mobile — Figma 860:19203 */
+@media (max-width: 767px) {
+  .salon-programs__card {
+    gap: 16px; /* Figma 375 */
+    padding: 20px; /* Figma 375 */
+  }
+
+  .salon-programs__row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px; /* Figma 375 */
+    padding: 12px 0; /* Figma 375 */
+    font-size: 18px; /* Figma 24 name → shrunk */
+  }
+
+  .salon-programs__row:has(.salon-programs__info) {
+    display: flex;
+  }
+
+  .salon-programs__info {
+    gap: 0;
+  }
+
+  .salon-programs__desc {
+    display: none; /* not in mobile Figma */
+  }
+
+  .salon-programs__meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px; /* Figma 375 */
+    width: 100%;
+  }
+
+  .salon-programs__duration,
+  .salon-programs__price {
+    font-size: 15px; /* Figma 18 → ~85% */
+  }
+}
+
+/* —— Salon promos (Figma 748:11679), scaled ~85% —— */
+.salon-promos > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 27px; /* Figma 32 */
+}
+
+.salon-promos .section-title {
+  margin: 0;
+}
+
+.salon-promos__list {
+  display: flex;
+  flex-direction: column;
+  gap: 27px; /* Figma 32 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.salon-promo {
+  display: flex;
+  align-items: flex-start;
+  gap: 34px; /* Figma 40 */
+}
+
+.salon-promo__media {
+  flex-shrink: 0;
+  width: 461px; /* Figma 542 */
+  height: 289px; /* Figma 340 */
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-100); /* #e5d3d3 */
+}
+
+.salon-promo__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.salon-promo__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 17px; /* Figma 20 */
+  min-width: 0;
+}
+
+.salon-promo__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 17px; /* Figma 20 */
+}
+
+.salon-promo__title {
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 20px; /* Figma 24 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-promo__fav {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px; /* Figma 32 */
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.salon-promo__fav img {
+  width: 28px;
+  height: 28px;
+}
+
+.salon-promo__text {
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 14px; /* Figma 16 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.salon-promos__more {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1439px) {
+  .salon-promos > .container {
+    gap: 22px;
+  }
+
+  .salon-promos__list {
+    gap: 22px;
+  }
+
+  .salon-promo {
+    gap: 24px;
+  }
+
+  .salon-promo__media {
+    width: 360px;
+    height: 226px;
+  }
+
+  .salon-promo__title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .salon-promos > .container {
+    gap: 32px; /* Figma 375 */
+  }
+
+  .salon-promos__list {
+    gap: 32px; /* Figma 375 */
+  }
+
+  .salon-promo {
+    flex-direction: column;
+    gap: 12px; /* Figma 375 */
+  }
+
+  .salon-promo__media {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 343 / 215; /* Figma 375 */
+  }
+
+  .salon-promo__body {
+    gap: 8px; /* Figma 375 */
+  }
+
+  .salon-promo__title {
+    font-size: 24px; /* Figma 375 */
+  }
+
+  .salon-promo__fav,
+  .salon-promo__fav img {
+    width: 32px; /* Figma 375 */
+    height: 32px;
+  }
+
+  .salon-promo__text {
+    font-size: 14px; /* Figma 375 */
+  }
+
+  .salon-promos__more .btn-dark {
+    width: 100%;
+    height: 48px; /* Figma 375 */
+  }
+}
+
+/* —— Salon reviews (Figma 586:4508), scaled ~85% —— */
+.salon-reviews > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Figma 24 */
+}
+
+.salon-reviews__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 27px; /* Figma 32 */
+}
+
+.salon-reviews__head .section-title {
+  margin: 0;
+  min-width: 0;
+}
+
+.salon-reviews__write {
+  flex-shrink: 0;
+}
+
+.salon-reviews__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Figma 24 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.salon-review {
+  display: flex;
+  align-items: flex-start;
+  gap: 34px; /* Figma 40 */
+  box-sizing: border-box;
+  padding: 17px 0; /* Figma 20 */
+  border-bottom: 1px solid var(--color-primary-150); /* #d8bcbc */
+}
+
+.salon-review__meta {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 10px; /* Figma 12 */
+  width: 336px; /* Figma 395 */
+}
+
+.salon-review__like {
+  display: block;
+  width: 48px; /* Figma 56 */
+  height: 48px;
+}
+
+.salon-review__author {
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 20px; /* Figma 24 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-review__date {
+  color: var(--color-neutral-400); /* #817979 */
+  font-family: var(--font-sans);
+  font-size: 14px; /* Figma 16 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.salon-review__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.salon-review__reply {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.salon-review__text {
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 14px; /* Figma 16 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.salon-review__reply-label {
+  display: block;
+}
+
+.salon-reviews__more {
+  display: flex;
+  justify-content: center;
+  padding-top: 28px; /* Figma ~56 from list → button, minus container gap */
+}
+
+@media (max-width: 1439px) {
+  .salon-reviews > .container {
+    gap: 18px;
+  }
+
+  .salon-review {
+    gap: 24px;
+    padding: 14px 0;
+  }
+
+  .salon-review__meta {
+    width: 260px;
+  }
+
+  .salon-review__author {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .salon-reviews > .container {
+    gap: 24px; /* Figma 375 */
+  }
+
+  .salon-reviews__head {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px; /* Figma 375 */
+  }
+
+  .salon-reviews__write {
+    width: 100%;
+    height: 48px; /* Figma 375 */
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+  .salon-reviews__list {
+    gap: 24px; /* Figma 375 */
+  }
+
+  .salon-review {
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 0; /* Figma 375 */
+  }
+
+  .salon-review__meta {
+    width: 100%;
+    gap: 8px; /* Figma 375 */
+    padding-bottom: 8px;
+  }
+
+  .salon-review__like {
+    width: 32px; /* Figma 375 */
+    height: 32px;
+  }
+
+  .salon-review__author {
+    font-size: 18px;
+  }
+
+  .salon-review__date {
+    font-size: 14px;
+  }
+
+  .salon-review__content > .salon-review__text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    font-size: 14px;
+  }
+
+  .salon-review__reply {
+    display: none;
+  }
+
+  .salon-reviews__more {
+    padding-top: 16px; /* Figma ~40 from list → button */
+  }
+
+  .salon-reviews__more .btn-dark {
+    width: 100%;
+    height: 48px; /* Figma 375 */
+  }
+}
+
+/* —— Other salons (Figma 851:12269), scaled ~85% —— */
+.salon-others > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 34px; /* Figma 40 */
+}
+
+.salon-others .section-title {
+  margin: 0;
+}
+
+.salon-others__slider {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.salon-others__list {
+  display: flex;
+}
+
+.salon-other {
+  position: relative;
+  display: block;
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 539 / 634;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background-color: var(--color-neutral-150);
+  text-decoration: none;
+}
+
+.salon-other.swiper-slide {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 539 / 634;
+  margin: 0;
+}
+
+.salon-other img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.salon-other__fade {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 27%;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 9, 9, 0) 0%,
+    rgba(10, 9, 9, 0.55) 100%
+  );
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  pointer-events: none;
+}
+
+.salon-other__name {
+  position: absolute;
+  right: 14px;
+  bottom: 27px; /* Figma ~32 */
+  left: 14px;
+  z-index: 2;
+  color: var(--color-neutral-0);
+  font-family: var(--font-sans);
+  font-size: 27px; /* Figma 32 */
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.salon-others__more {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1439px) {
+  .salon-others > .container {
+    gap: 28px;
+  }
+
+  .salon-other__name {
+    font-size: 22px;
+    bottom: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .salon-others > .container {
+    gap: 24px; /* Figma 375 */
+  }
+
+  .salon-others__slider {
+    margin-inline: calc(-1 * var(--page-pad-x));
+    width: calc(100% + 2 * var(--page-pad-x));
+  }
+
+  .salon-other,
+  .salon-other.swiper-slide {
+    width: 334px; /* Figma 375 */
+    height: 394px;
+    aspect-ratio: auto;
+  }
+
+  .salon-other__fade {
+    height: 44%; /* Figma 173 / 394 */
+  }
+
+  .salon-other__name {
+    font-size: 24px; /* Figma 375 */
+    bottom: 25px;
+  }
+
+  .salon-others__more .btn-dark {
+    width: 100%;
+    height: 48px; /* Figma 375 */
+  }
+}
+
+/* —— Booking CTA (Figma 586:4538), scaled ~85% —— */
+.booking__card {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px; /* Figma 32 */
+  box-sizing: border-box;
+  padding: 28px; /* Figma 32 */
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-surface);
+}
+
+.booking__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* Figma 16 */
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.booking__copy .section-title {
+  margin: 0;
+}
+
+.booking__text {
+  margin: 0;
+  max-width: 830px; /* Figma ~977 → ~85% */
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.booking__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px; /* Figma 12 */
+  flex-shrink: 0;
+}
+
+@media (max-width: 1439px) {
+  .booking__card {
+    gap: 22px;
+    padding: 22px;
+  }
+
+  .booking__text {
+    font-size: 14px;
+  }
+}
+
+/* Mobile — Figma 860:19916 */
+@media (max-width: 767px) {
+  .booking__card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px; /* Figma 375 */
+    padding: 20px; /* Figma 375 */
+  }
+
+  .booking__copy {
+    gap: 16px; /* Figma 375 */
+  }
+
+  .booking__text {
+    max-width: none;
+    font-size: 14px; /* Figma 16 */
+  }
+
+  .booking__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px; /* Figma 375 */
+    width: 100%;
+  }
+
+  .booking__actions .btn-dark,
+  .booking__actions .btn-outline {
+    width: 100%;
+    height: 48px; /* Figma 375 */
+    font-size: 14px; /* Figma 375 */
+  }
+}
