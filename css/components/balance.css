@@ -1,0 +1,397 @@
+/* Balance / top-up — Figma Group 20 / 3015:28915, scaled ~85% */
+
+.balance .cabinet__notice {
+  display: none;
+}
+
+.balance__intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px; /* Figma 16 */
+  margin-top: 34px; /* Figma ~40 */
+  max-width: 1064px; /* Figma 1252 */
+}
+
+.balance__intro-icon {
+  flex-shrink: 0;
+  width: 27px; /* Figma 32 */
+  height: 27px;
+  margin-top: 2px;
+}
+
+.balance__intro-title {
+  margin: 0;
+  color: var(--color-primary-950); /* #190707 */
+  font-family: var(--font-sans);
+  font-size: 17px; /* Figma 20 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.balance__intro-text {
+  margin: 7px 0 0; /* Figma 8 */
+  color: var(--color-neutral-950); /* #0a0909 */
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.balance .cabinet__body {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 458px); /* Figma 1109 / 539 */
+  gap: 28px 27px; /* Figma 32 */
+  margin-top: 34px; /* Figma ~40 */
+  align-items: start;
+}
+
+.balance .cabinet__main {
+  gap: 20px; /* Figma 24 */
+}
+
+.balance .cabinet__aside {
+  gap: 34px; /* Figma 40 between balance card and tips */
+}
+
+/* Beat `.cabinet__actions a.btn-outline { background: transparent }` */
+.balance .cabinet__actions a.btn-outline.is-active {
+  border-color: transparent;
+  background-color: var(--color-neutral-950);
+  color: var(--color-neutral-0); /* Figma #ffffff */
+}
+
+.balance .cabinet__actions a.btn-outline.is-active img {
+  filter: brightness(0) invert(1);
+}
+
+/* —— Payment method card —— */
+.balance-method {
+  box-sizing: border-box;
+  padding: 28px; /* Figma 32 */
+  border-radius: var(--radius-md);
+  background-color: var(--color-neutral-0);
+}
+
+.balance-method__title {
+  margin: 0;
+  color: var(--color-primary-950);
+  font-family: var(--font-sans);
+  font-size: 27px; /* Figma 32 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.balance-method__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px; /* Figma 16 */
+  margin-top: 14px; /* Figma 16 */
+}
+
+.balance-method__field {
+  order: 1;
+  flex: 1 1 240px;
+  min-width: 0;
+  max-width: 431px; /* Figma 507 */
+}
+
+.balance-method__input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 54px; /* Figma 64 */
+  padding: 0 17px; /* Figma 20 */
+  border: 1px solid var(--color-neutral-200); /* #c8c5c5 */
+  border-radius: var(--radius-sm); /* 12 */
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 17px; /* Figma 20 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.balance-method__input::placeholder {
+  color: var(--color-neutral-500); /* #615858 */
+  opacity: 1;
+}
+
+.balance-method__input:focus {
+  outline: none;
+  border-color: var(--color-primary-400);
+}
+
+.balance-method__submit {
+  order: 2;
+  flex: 0 0 auto;
+}
+
+.balance-method__info {
+  order: 3;
+  flex: 0 0 auto;
+  font-size: 15px; /* Figma 18 */
+  text-align: left;
+}
+
+.balance-method__note {
+  order: 4;
+  flex: 1 0 100%;
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* —— Current balance card —— */
+.balance-current {
+  box-sizing: border-box;
+  padding: 28px; /* Figma 32 */
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-70); /* #eadcdc */
+}
+
+.balance-current__title {
+  margin: 0;
+  color: var(--color-primary-950);
+  font-family: var(--font-sans);
+  font-size: 20px; /* Figma 24 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.balance-current__amount {
+  margin: 14px 0 0; /* Figma 16 */
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 34px; /* Figma 40 */
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* —— Tips card —— */
+.balance-tips {
+  box-sizing: border-box;
+  padding: 28px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-neutral-0);
+}
+
+.balance-tips__title {
+  margin: 0 0 20px; /* Figma gap 20 after title */
+  color: var(--color-primary-950);
+  font-family: var(--font-sans);
+  font-size: 20px; /* Figma 24 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.balance-tips__list {
+  display: flex;
+  flex-direction: column;
+  gap: 17px; /* Figma ~20 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.balance-tips__item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px; /* Figma 4 */
+}
+
+.balance-tips__label {
+  margin: 0;
+  color: var(--color-neutral-950); /* #0a0909 */
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.balance-tips__text {
+  margin: 0;
+  color: var(--color-neutral-800); /* #272323 */
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Laptop */
+@media (max-width: 1439px) {
+  .balance .cabinet__body {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 360px);
+    gap: 24px;
+  }
+
+  .balance-method__title {
+    font-size: 22px;
+  }
+
+  .balance-method__row {
+    gap: 12px;
+  }
+
+  .balance-method__field {
+    max-width: none;
+  }
+}
+
+/* Mobile — Figma Group 21 / 3015:28916 (375) */
+@media (max-width: 767px) {
+  .balance__intro {
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px; /* Figma 344 − 264 − 48 */
+    max-width: none;
+  }
+
+  .balance__intro-icon {
+    width: 32px;
+    height: 32px;
+    margin-top: 0;
+  }
+
+  /* Flatten so title sits with icon; text spans full width below */
+  .balance__intro-copy {
+    display: contents;
+  }
+
+  .balance__intro-title {
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: 20px;
+  }
+
+  .balance__intro-text {
+    flex: 1 0 100%;
+    margin: 0;
+    font-size: 16px;
+  }
+
+  /* Order: current balance → methods → tips */
+  .balance .cabinet__body {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    margin-top: 20px; /* Figma 518 − 344 − 154 */
+    gap: 24px;
+  }
+
+  .balance .cabinet__aside {
+    display: contents;
+  }
+
+  .balance-current {
+    order: 1;
+  }
+
+  .balance .cabinet__main {
+    order: 2;
+    gap: 8px; /* Figma methods itemSpacing */
+  }
+
+  .balance-tips {
+    order: 3;
+    margin-top: 32px; /* Figma ~56 after methods with body gap 24 */
+  }
+
+  .balance-method {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .balance-method__title {
+    font-size: 26px;
+  }
+
+  .balance-method__row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px; /* Figma input → note */
+    margin-top: 16px;
+  }
+
+  .balance-method__field {
+    order: 1;
+    flex: 0 0 auto; /* kill desktop flex-basis 240px that blew up card height */
+    width: 100%;
+    max-width: none;
+  }
+
+  .balance-method__note {
+    order: 2;
+    flex: 0 0 auto;
+    width: 100%;
+    color: var(--color-neutral-400); /* #817979 */
+    font-size: 14px;
+  }
+
+  .balance-method__submit {
+    order: 3;
+    width: 100%;
+    margin-top: 8px; /* Figma 16 before button */
+  }
+
+  .balance-method__submit.btn-dark {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .balance-method__submit.btn-dark img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .balance-method__info {
+    order: 4;
+    align-self: flex-start;
+    font-size: 18px;
+  }
+
+  .balance-method__input {
+    height: 64px;
+    padding: 0 20px;
+    font-size: 20px;
+  }
+
+  .balance-current {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .balance-current__title {
+    font-size: 20px;
+  }
+
+  .balance-current__amount {
+    margin-top: 2px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  .balance-tips {
+    padding: 20px;
+  }
+
+  .balance-tips__title {
+    margin-bottom: 16px;
+    font-size: 24px;
+  }
+
+  .balance-tips__list {
+    gap: 16px;
+  }
+
+  .balance-tips__label,
+  .balance-tips__text {
+    font-size: 18px;
+  }
+}
