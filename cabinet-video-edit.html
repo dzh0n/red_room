@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Видео — Mr. President</title>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components/top-banner.css" />
+    <link rel="stylesheet" href="css/components/header.css" />
+    <link rel="stylesheet" href="css/components/mobile-menu.css" />
+    <link rel="stylesheet" href="css/components/page-intro.css" />
+    <link rel="stylesheet" href="css/components/buttons.css" />
+    <link rel="stylesheet" href="css/components/cabinet.css" />
+    <link rel="stylesheet" href="css/components/cabinet-edit.css" />
+    <link rel="stylesheet" href="css/components/tag.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
+    <link rel="stylesheet" href="css/components/scroll-top.css" />
+    <link rel="stylesheet" href="css/components/cookies.css" />
+  </head>
+  <body>
+    <div class="page">
+      <aside class="top-banner" aria-label="Возрастное ограничение">
+        <span class="top-banner__age">18+</span>
+        <p class="top-banner__text">
+          Контент рассчитан только<br />на совершеннолетнюю аудиторию
+        </p>
+        <span class="top-banner__age top-banner__age--end" aria-hidden="true"
+          >18+</span
+        >
+      </aside>
+
+      <header class="site-header site-header--static">
+        <div class="site-header__top">
+          <div class="container site-header__inner">
+            <button type="button" class="site-header__meta site-header__city">
+              <img
+                src="images/icon-header-pin-light.svg"
+                alt=""
+                width="16"
+                height="16"
+              />
+              Пермь
+            </button>
+
+            <div class="site-header__top-right">
+              <div class="site-header__contacts">
+                <span class="site-header__meta">
+                  <img
+                    src="images/icon-header-clock-light.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                  />
+                  24/7
+                </span>
+                <a class="site-header__meta site-header__phone" href="tel:+73420000000">
+                  <img
+                    src="images/icon-header-phone-light.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                  />
+                  +7 342 000-00-00
+                </a>
+              </div>
+
+              <div class="site-header__social">
+                <a
+                  class="site-header__social-link"
+                  href="#"
+                  aria-label="ВКонтакте"
+                >
+                  <img
+                    src="images/icon-header-vk.svg"
+                    alt=""
+                    width="32"
+                    height="32"
+                  />
+                </a>
+                <a
+                  class="site-header__social-link"
+                  href="#"
+                  aria-label="Telegram"
+                >
+                  <img
+                    src="images/icon-header-telegram.svg"
+                    alt=""
+                    width="32"
+                    height="32"
+                  />
+                </a>
+                <a
+                  class="site-header__social-link"
+                  href="#"
+                  aria-label="WhatsApp"
+                >
+                  <img
+                    src="images/icon-header-whatsapp.svg"
+                    alt=""
+                    width="32"
+                    height="32"
+                  />
+                </a>
+                <a
+                  class="site-header__social-link"
+                  href="#"
+                  aria-label="Max"
+                >
+                  <img
+                    src="images/icon-header-max.png"
+                    alt=""
+                    width="32"
+                    height="32"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="site-header__bottom">
+          <div class="container site-header__inner">
+            <a class="site-header__logo" href="index.html" aria-label="Ред Рум — на главную">
+              <img
+                class="site-header__logo-desktop"
+                src="images/logo.png"
+                alt="Ред Рум — эротический массаж"
+                width="136"
+                height="64"
+              />
+              <img
+                class="site-header__logo-mobile"
+                src="images/logo-header-mobile.png"
+                alt="Ред Рум — эротический массаж"
+                width="86"
+                height="40"
+              />
+            </a>
+
+            <nav class="site-header__nav" aria-label="Основное меню">
+              <a class="site-header__link" href="salons.html">Салоны</a>
+              <a class="site-header__link" href="salon-masseuses.html">Массажистки салонов</a>
+              <a class="site-header__link" href="masseuses.html">Частные массажистки</a>
+              <a class="site-header__link" href="#">Отзывы</a>
+              <a class="site-header__link" href="#">Акции</a>
+            </nav>
+
+            <div class="site-header__actions site-header__actions--desktop">
+              <a class="site-header__link" href="favorites.html">
+                <img
+                  src="images/icon-header-heart.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                Избранное
+              </a>
+              <a class="site-header__link" href="cabinet.html">
+                <img
+                  src="images/icon-header-salon.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                Вход для салонов
+              </a>
+              <a class="site-header__link" href="#">
+                <img
+                  src="images/icon-header-masseuse.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                Вход для массажисток
+              </a>
+            </div>
+
+            <div class="site-header__actions site-header__actions--mobile">
+              <a
+                class="site-header__icon-btn"
+                href="tel:+73420000000"
+                aria-label="Позвонить"
+              >
+                <img
+                  src="images/icon-header-phone-mobile.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+              </a>
+              <a class="site-header__icon-btn" href="favorites.html" aria-label="Избранное">
+                <img
+                  src="images/icon-header-heart.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+              </a>
+              <button
+                type="button"
+                class="site-header__icon-btn site-header__menu-toggle"
+                aria-label="Меню"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <img
+                  class="site-header__menu-icon site-header__menu-icon--burger"
+                  src="images/icon-header-burger.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                <img
+                  class="site-header__menu-icon site-header__menu-icon--close"
+                  src="images/icon-header-close.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                  hidden
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div
+        class="mobile-menu"
+        id="mobile-menu"
+        hidden
+        aria-hidden="true"
+      >
+        <div class="mobile-menu__inner">
+          <button type="button" class="mobile-menu__city site-header__meta">
+            <img
+              src="images/icon-header-pin.svg"
+              alt=""
+              width="16"
+              height="16"
+            />
+            Пермь
+          </button>
+
+          <nav class="mobile-menu__nav" aria-label="Мобильное меню">
+            <a class="site-header__link" href="salons.html">Салоны</a>
+            <a class="site-header__link" href="salon-masseuses.html">Массажистки салонов</a>
+            <a class="site-header__link" href="masseuses.html">Частные массажистки</a>
+            <a class="site-header__link" href="#">Отзывы</a>
+            <a class="site-header__link" href="#">Акции</a>
+          </nav>
+
+          <div class="mobile-menu__personal">
+            <a class="site-header__link" href="favorites.html">
+                <img
+                  src="images/icon-header-heart.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+              Избранное
+            </a>
+            <a class="site-header__link" href="cabinet.html">
+              <img
+                src="images/icon-header-salon.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+              Вход для салонов
+            </a>
+            <a class="site-header__link" href="#">
+              <img
+                src="images/icon-header-masseuse.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+              Вход для массажисток
+            </a>
+          </div>
+
+          <div class="mobile-menu__contacts">
+            <span class="site-header__meta">
+              <img
+                src="images/icon-header-clock.svg"
+                alt=""
+                width="16"
+                height="16"
+              />
+              24/7
+            </span>
+            <a class="site-header__meta site-header__phone" href="tel:+73420000000">
+              <img
+                src="images/icon-header-phone.svg"
+                alt=""
+                width="16"
+                height="16"
+              />
+              +7 342 000-00-00
+            </a>
+          </div>
+
+          <div class="mobile-menu__social">
+            <a class="mobile-menu__social-link" href="#" aria-label="VK">
+              <img
+                src="images/icon-header-vk.svg"
+                alt=""
+                width="44"
+                height="44"
+              />
+            </a>
+            <a class="mobile-menu__social-link" href="#" aria-label="Telegram">
+              <img
+                src="images/icon-header-telegram.svg"
+                alt=""
+                width="44"
+                height="44"
+              />
+            </a>
+            <a class="mobile-menu__social-link" href="#" aria-label="WhatsApp">
+              <img
+                src="images/icon-header-whatsapp.svg"
+                alt=""
+                width="44"
+                height="44"
+              />
+            </a>
+            <a class="mobile-menu__social-link" href="#" aria-label="Max">
+              <img
+                src="images/icon-header-max.png"
+                alt=""
+                width="44"
+                height="44"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <section class="cabinet cabinet-edit" aria-labelledby="cabinet-edit-title">
+          <div class="container">
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+              <ol class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="index.html">Главная</a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="cabinet.html">Кабинет салонов</a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <span class="breadcrumbs__current">Видео</span>
+                </li>
+              </ol>
+            </nav>
+
+            <div class="cabinet__head">
+              <div class="cabinet__intro">
+                <h1 class="cabinet__title" id="cabinet-edit-title">
+                  Видео&nbsp;-&nbsp;Mr. President
+                </h1>
+                <p class="cabinet__login">Ваш логин: salon@dratilnya.ru</p>
+              </div>
+              <div class="cabinet__actions">
+                <a class="btn-dark" href="cabinet.html">
+                  <img
+                    class="cabinet-edit__back-icon"
+                    src="images/icon-chevron-right.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                  />
+                  <span>Вернуться в кабинет</span>
+                </a>
+              </div>
+            </div>
+
+            <nav class="cabinet-edit__tabs" aria-label="Разделы салона">
+              <div class="cabinet-edit__tabs-scroll">
+                <ul class="cabinet-edit__tabs-list">
+                  <li>
+                    <a class="cabinet-edit__tab" href="cabinet-contacts.html">Контакты</a>
+                  </li>
+                  <li>
+                    <a class="cabinet-edit__tab" href="cabinet-description.html">Описание</a>
+                  </li>
+                  <li>
+                    <a class="cabinet-edit__tab" href="cabinet-photos.html">Фотографии</a>
+                  </li>
+                  <li>
+                    <a
+                      class="cabinet-edit__tab is-active"
+                      href="cabinet-video-edit.html"
+                      aria-current="page"
+                      >Видео</a
+                    >
+                  </li>
+                  <li>
+                    <a class="cabinet-edit__tab" href="cabinet-masters.html">Мастера</a>
+                  </li>
+                  <li>
+                    <a class="cabinet-edit__tab" href="cabinet-programs.html">Программы</a>
+                  </li>
+                  <li>
+                    <a class="cabinet-edit__tab" href="cabinet-reviews.html">Отзывы</a>
+                  </li>
+                  <li>
+                    <a class="cabinet-edit__tab" href="cabinet-vacancies.html">Вакансии</a>
+                  </li>
+                  <li>
+                    <a class="cabinet-edit__tab" href="cabinet-promos.html">Акции</a>
+                  </li>
+                  <li>
+                    <a class="cabinet-edit__tab" href="cabinet-stats-edit.html">Статистика</a>
+                  </li>
+                  <li>
+                    <a class="cabinet-edit__tab" href="cabinet-ads.html">Управление рекламой</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+            <div class="cabinet-edit__content">
+              <div class="video-edit">
+                <p class="video-edit__count">Добавлено&nbsp;1 из&nbsp;2 возможных</p>
+                <div class="video-edit__grid" role="list">
+                  <div class="video-edit__item video-edit__item--add-start" role="listitem">
+                    <button
+                      type="button"
+                      class="photo-card photo-card--add"
+                      aria-label="Добавить видео"
+                      data-video-add
+                    >
+                      <span class="photo-card__add-icon" aria-hidden="true">
+                        <img src="images/icon-photo-plus.svg" alt="" width="32" height="32" />
+                      </span>
+                      <span class="photo-card__add-text">Добавить видео</span>
+                    </button>
+                  </div>
+                  <div class="video-edit__item" role="listitem">
+                    <article class="photo-card video-card">
+                      <img
+                        class="photo-card__img"
+                        src="images/cabinet-video-thumb.png"
+                        alt=""
+                        width="253"
+                        height="312"
+                      />
+                      <div class="photo-card__ui">
+                        <div class="photo-card__row photo-card__row--top">
+                          <span class="photo-card__badge photo-card__badge--ok">Одобрено</span>
+                          <button
+                            type="button"
+                            class="photo-card__btn photo-card__btn--light"
+                            aria-label="Удалить видео"
+                          >
+                            <img src="images/icon-photo-delete.svg" alt="" width="32" height="32" />
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="video-edit__item" role="listitem">
+                    <button
+                      type="button"
+                      class="photo-card photo-card--add"
+                      aria-label="Добавить видео"
+                      data-video-add
+                    >
+                      <span class="photo-card__add-icon" aria-hidden="true">
+                        <img src="images/icon-photo-plus.svg" alt="" width="32" height="32" />
+                      </span>
+                      <span class="photo-card__add-text">Добавить видео</span>
+                    </button>
+                  </div>
+                </div>
+
+                <aside class="cabinet-about" aria-labelledby="video-about-title">
+                  <h2 class="cabinet-about__title" id="video-about-title">О разделе</h2>
+                  <div class="cabinet-about__body">
+                    <p>
+                      Добавили возможность загружать видео в анкеты салонов. Видео могут загружать все салоны. Функционал тестовый, поэтому если у Вас есть какие то пожелания или вы заметили какие то недочеты в работе этой функции – просьба писать об этом в техподдержку.
+                    </p>
+                  </div>
+                  <div class="cabinet-about__note">
+                    <p><strong>Лимиты:</strong></p>
+                    <p>Минимальная длительность – 7 секунд</p>
+                    <p>Максимальная длительность – 10 минут</p>
+                    <p>Максимальный размер видео – 1 Гигабайт</p>
+                    <p>
+                      На&nbsp;один салон&nbsp;пока можно загрузить&nbsp;одно видео. В дальнейшем лимиты пересмотрим.
+                    </p>
+                  </div>
+                  <div class="cabinet-about__body cabinet-about__body--follow">
+                    <p>
+                      Загрузка видео делится на два этапа: 1 – загрузка, 2 – обработка. При загрузке видео эта страница должна быть открыта, если ее закрыть – загрузка прервётся. При обработке видео страницу можно закрывать. Загружать видео нужно при стабильной и высокой скорости интернета, в идеале это вай-фай или 4g сеть.
+                    </p>
+                    <p>
+                      После загрузки видео оно отправляется на модерацию, после успешной проверки модератором видео будет опубликовано на вашей странице. Если мы посчитаем видео неприемлемым – оно опубликовано не будет. Подробные правили по содержанию видео опишем позже, но если вы загружайте нормальные приемлемые видео – опасаться Вам нечего.
+                    </p>
+                    <p>
+                      Посмотреть пример хорошего видео, а так же посмотреть как это все будет работать, можно на примере&nbsp;<a class="cabinet-about__link" href="salon.html">этого салона</a>
+                    </p>
+                  </div>
+                </aside>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </main>
+
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <nav class="footer-tags" aria-label="Быстрые фильтры">
+            <a class="tag" href="#">Лучшие салоны</a>
+            <a class="tag tag--active" href="#">Недорогой массаж</a>
+            <a class="tag" href="#">Премиум SPA</a>
+            <a class="tag" href="#">С оплатой картой</a>
+            <span class="tag-item">
+              <button
+                type="button"
+                class="tag"
+                aria-expanded="false"
+                aria-describedby="footer-tip-parking"
+              >
+                С парковкой
+              </button>
+              <span class="tag-tip" id="footer-tip-parking" role="tooltip">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </span>
+            </span>
+            <a class="tag" href="#">Новые салоны</a>
+            <a class="tag" href="#">Массажистки дня</a>
+            <a class="tag" href="#">С подарками</a>
+            <span class="tag-item">
+              <button
+                type="button"
+                class="tag"
+                aria-expanded="false"
+                aria-describedby="footer-tip-visit"
+              >
+                С выездом
+              </button>
+              <span class="tag-tip" id="footer-tip-visit" role="tooltip">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </span>
+            </span>
+            <a class="tag" href="#">Принимают у себя</a>
+            <a class="tag" href="#">С оплатой картой</a>
+            <a class="tag" href="#">Недорогой массаж</a>
+            <a class="tag" href="#">Лучшие салоны</a>
+            <a class="tag" href="#">Премиум SPA</a>
+            <a class="tag" href="#">Новые салоны</a>
+            <a class="tag" href="#">С парковкой</a>
+          </nav>
+
+          <div class="footer-main">
+            <div class="footer-brand">
+              <a class="footer-brand__logo" href="index.html" aria-label="Ред Рум — на главную">
+                <img
+                  src="images/logo.png"
+                  width="189"
+                  height="89"
+                  alt="Ред Рум — эротический массаж"
+                />
+              </a>
+
+              <div class="footer-brand__text">
+                <p class="footer-brand__desc">
+                  Агрегатор 18+ для поиска салонов, мастеров, программ, цен,
+                  акций и отзывов в Перми.
+                </p>
+                <p class="footer-brand__copy">© 2026 · Dratilnya</p>
+              </div>
+
+              <div class="footer-brand__legal">
+                <a class="footer-link" href="#">ИНН / ОГРН</a>
+                <a class="footer-link" href="#">Политика конфиденциальности</a>
+              </div>
+            </div>
+
+            <div class="footer-navs">
+              <nav class="footer-nav" aria-labelledby="footer-nav-sections">
+                <p class="footer-nav__title" id="footer-nav-sections">Разделы</p>
+                <ul class="footer-nav__list">
+                  <li><a class="footer-link" href="salons.html">Салоны</a></li>
+                  <li><a class="footer-link" href="masseuses.html">Частные массажистки</a></li>
+                  <li><a class="footer-link" href="#">Программы</a></li>
+                  <li><a class="footer-link" href="#">Акции</a></li>
+                  <li><a class="footer-link" href="#">Цены</a></li>
+                </ul>
+              </nav>
+
+              <nav class="footer-nav" aria-labelledby="footer-nav-clients">
+                <p class="footer-nav__title" id="footer-nav-clients">Клиентам</p>
+                <ul class="footer-nav__list">
+                  <li><a class="footer-link" href="#">Отзывы</a></li>
+                  <li><a class="footer-link" href="#">Карта</a></li>
+                  <li><a class="footer-link" href="favorites.html">Избранное</a></li>
+                  <li><a class="footer-link" href="cabinet.html">Личный кабинет</a></li>
+                  <li><a class="footer-link" href="#">Построить маршрут</a></li>
+                </ul>
+              </nav>
+
+              <nav class="footer-nav" aria-labelledby="footer-nav-service">
+                <p class="footer-nav__title" id="footer-nav-service">Сервис</p>
+                <ul class="footer-nav__list">
+                  <li><a class="footer-link" href="#">Добавить салон</a></li>
+                  <li><a class="footer-link" href="#">Добавить мастера</a></li>
+                  <li><a class="footer-link" href="#">Реклама</a></li>
+                  <li><a class="footer-link" href="#">Правила сервиса</a></li>
+                  <li><a class="footer-link" href="#">Пожаловаться</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <button type="button" class="scroll-top" aria-label="Наверх">
+      <img src="images/icon-chevron-up.svg" alt="" width="24" height="24" />
+    </button>
+
+    <div class="photos-modal" id="video-upload-modal" hidden>
+      <div class="photos-modal__backdrop" data-video-modal-close tabindex="-1"></div>
+      <div
+        class="photos-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="video-upload-title"
+        tabindex="-1"
+      >
+        <button
+          type="button"
+          class="photos-modal__close"
+          data-video-modal-close
+          aria-label="Закрыть"
+        >
+          <img src="images/icon-modal-close.svg" alt="" width="40" height="40" />
+        </button>
+        <form class="photos-modal__form" action="#" method="post" enctype="multipart/form-data">
+          <h2 class="photos-modal__title" id="video-upload-title">Выбрать файл</h2>
+          <div class="photos-modal__body">
+            <div class="photos-modal__file-row">
+              <button
+                type="button"
+                class="photos-modal__file"
+                data-video-pick
+                aria-controls="video-file-input"
+              >
+                <span
+                  class="photos-modal__filename is-placeholder"
+                  data-video-filename
+                  data-placeholder="Наименование файла.mp4"
+                  >Наименование файла.mp4</span
+                >
+              </button>
+              <input
+                class="visually-hidden"
+                id="video-file-input"
+                data-video-file-input
+                type="file"
+                name="video"
+                accept=".mp4,.mov,.webm,video/mp4,video/quicktime,video/webm"
+              />
+              <button type="button" class="btn-link photos-modal__replace" data-video-pick>
+                Заменить
+              </button>
+            </div>
+            <p class="photos-modal__hint">Размер файла не должен превышать 1&nbsp;Гб</p>
+            <p class="photos-modal__hint">Допустимые форматы файла mp4, mov, webm</p>
+          </div>
+          <div class="photos-modal__actions">
+            <button type="submit" class="btn-dark photos-modal__submit">Загрузить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <aside
+      class="cookies-banner"
+      role="dialog"
+      aria-label="Уведомление о cookies"
+      aria-describedby="cookies-banner-text"
+      hidden
+    >
+      <div class="cookies-banner__inner">
+        <p class="cookies-banner__text" id="cookies-banner-text">
+          Мы используем cookies, чтобы сайт работал стабильнее и было удобнее
+          им пользоваться. Продолжая просмотр, вы соглашаетесь с
+          <a class="cookies-banner__link" href="#">политикой конфиденциальности</a>.
+        </p>
+        <div class="cookies-banner__actions">
+          <button type="button" class="btn-dark cookies-banner__accept">
+            Принять
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <script src="js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/tags.js"></script>
+    <script src="js/scroll-top.js"></script>
+    <script src="js/cookies.js"></script>
+    <script src="js/cabinet-video.js"></script>
+  </body>
+</html>
