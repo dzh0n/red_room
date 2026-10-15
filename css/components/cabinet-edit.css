@@ -852,6 +852,271 @@
   margin-top: 34px; /* Figma 40 */
 }
 
+/* —— Masters — Figma Group 31 / 3034:25835 —— */
+
+.masters-edit {
+  width: 100%;
+  min-width: 0;
+}
+
+.masters-edit__count {
+  margin: 0;
+  color: #e73d45;
+  font-family: var(--font-sans);
+  font-size: 14px; /* Figma 16 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.masters-edit__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 27px; /* Figma 32 */
+  margin-top: 34px; /* Figma ~40 */
+}
+
+.masters-edit__item {
+  min-width: 0;
+}
+
+/* Top “Добавить мастера” — mobile only (Figma Group 32) */
+.masters-edit__item--add-start {
+  display: none;
+}
+
+.master-card {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  aspect-ratio: 395 / 575;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-md);
+  background-color: var(--color-neutral-0);
+  padding: 0;
+  text-align: left;
+  cursor: default;
+}
+
+.master-card__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.master-card__ui {
+  position: absolute;
+  inset: 14px; /* Figma 16 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.master-card__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.master-card__row--bottom {
+  align-items: flex-end;
+}
+
+.master-card__identity {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+}
+
+.master-card__name {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  min-height: 41px; /* Figma 48 */
+  padding: 4px 10px; /* Figma 12/6 */
+  border-radius: 40px;
+  background-color: #f2e8e8;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 20px; /* Figma 24 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.master-card__id {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px; /* Figma 33 */
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background-color: rgba(126, 34, 34, 0.8); /* #7e2222cc */
+  color: #f2e8e8;
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.master-card__btn {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px; /* Figma 40 */
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 56px;
+  background-color: rgba(25, 7, 7, 0.8); /* #190707cc */
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.master-card__btn img {
+  width: 27px; /* Figma 32 */
+  height: 27px;
+}
+
+.master-card__btn:hover {
+  opacity: 0.88;
+}
+
+.master-card__btn:focus-visible {
+  outline: 2px solid var(--color-primary-400);
+  outline-offset: 2px;
+}
+
+.master-card__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px; /* Figma itemSpacing in tags stack */
+  min-width: 0;
+}
+
+.master-card__stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.master-card__stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px; /* Figma 8 */
+  min-height: 26px; /* Figma 30 */
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background-color: rgba(10, 9, 9, 0.7); /* #0a0909b2 */
+  color: #f2e8e8;
+  font-family: var(--font-sans);
+  font-size: 14px; /* Figma 16 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.master-card__stat img {
+  flex-shrink: 0;
+  width: 17px; /* Figma 20 */
+  height: 17px;
+}
+
+.master-card__boost {
+  pointer-events: auto;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Figma 12 */
+  min-height: 54px; /* Figma 64 */
+  padding: 14px 20px; /* Figma ~24/32 scaled */
+  border: 1px solid #d8bcbc;
+  border-radius: 48px;
+  background-color: var(--color-neutral-950);
+  color: #d8bcbc;
+  font-family: var(--font-sans);
+  font-size: 17px; /* Figma 20 */
+  font-weight: 600;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.master-card__boost img {
+  width: 17px; /* Figma 20 */
+  height: 17px;
+}
+
+.master-card__boost:hover {
+  opacity: 0.9;
+}
+
+.master-card__boost:focus-visible {
+  outline: 2px solid var(--color-primary-400);
+  outline-offset: 2px;
+}
+
+.master-card--add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px dashed var(--color-primary-350);
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.master-card--add:hover {
+  background-color: var(--color-primary-100);
+}
+
+.master-card--add:focus-visible {
+  outline: 2px solid var(--color-primary-400);
+  outline-offset: 2px;
+}
+
+.master-card__add-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 56px;
+  background-color: var(--color-primary-70);
+}
+
+.master-card__add-icon img {
+  width: 27px;
+  height: 27px;
+}
+
+.master-card__add-text {
+  color: var(--color-primary-350);
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.masters-edit > .cabinet-about {
+  margin-top: 85px; /* Figma ~100 */
+}
+
 /* —— Upload modal — Figma 929:19860 —— */
 
 .photos-modal {
@@ -1062,6 +1327,15 @@ body.is-photos-modal-open {
   .video-edit > .cabinet-about {
     margin-top: 56px;
   }
+
+  .masters-edit__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .masters-edit > .cabinet-about {
+    margin-top: 56px;
+  }
 }
 
 @media (max-width: 1099px) {
@@ -1097,6 +1371,10 @@ body.is-photos-modal-open {
 
   .video-edit__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .masters-edit__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1519,6 +1797,106 @@ body.is-photos-modal-open {
 
   .video-edit > .cabinet-about .cabinet-about__body--follow {
     margin-top: 40px;
+  }
+
+  /* Masters — Figma Group 32 / 3035:25836 (~1:1) */
+  .masters-edit__count {
+    font-size: 14px; /* Figma */
+  }
+
+  .masters-edit__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px; /* Figma itemSpacing */
+    margin-top: 20px; /* Figma counter → grid */
+  }
+
+  .masters-edit__item--add-start {
+    display: block;
+  }
+
+  .masters-edit .master-card:not(.master-card--add) {
+    aspect-ratio: 343 / 540; /* Figma mobile card */
+  }
+
+  .masters-edit .master-card__ui {
+    inset: 8px; /* Figma 8 */
+  }
+
+  .masters-edit .master-card__name {
+    min-height: 48px;
+    padding: 4px 12px;
+    font-size: 24px; /* Figma */
+  }
+
+  .masters-edit .master-card__id {
+    min-height: 33px;
+    padding: 4px 12px;
+    font-size: 18px; /* Figma */
+  }
+
+  .masters-edit .master-card__btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .masters-edit .master-card__btn img,
+  .masters-edit .master-card__add-icon img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .masters-edit .master-card__stat {
+    min-height: 30px;
+    gap: 8px;
+    font-size: 16px; /* Figma */
+  }
+
+  .masters-edit .master-card__stat img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .masters-edit .master-card__boost {
+    min-height: 64px;
+    padding: 16px 24px;
+    gap: 12px;
+    font-size: 20px; /* Figma */
+  }
+
+  .masters-edit .master-card__boost img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .masters-edit .master-card--add {
+    aspect-ratio: auto;
+    min-height: 107px; /* Figma add strip */
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .masters-edit .master-card__add-icon {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+  }
+
+  .masters-edit .master-card__add-text {
+    font-size: 18px; /* Figma */
+  }
+
+  .masters-edit > .cabinet-about {
+    margin-top: 80px; /* Figma grid → about */
+    padding: 20px;
+  }
+
+  .masters-edit > .cabinet-about .cabinet-about__title {
+    font-size: 32px; /* Figma Tenor */
+  }
+
+  .masters-edit > .cabinet-about .cabinet-about__body {
+    margin-top: 16px;
+    font-size: 16px;
   }
 
   /* Upload modal — Figma 1080:22946 (~1:1) */
