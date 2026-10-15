@@ -977,6 +977,8 @@
   border: 0;
   border-radius: 56px;
   background-color: rgba(25, 7, 7, 0.8); /* #190707cc */
+  color: inherit;
+  text-decoration: none;
   cursor: pointer;
   transition: opacity 0.15s ease;
 }
@@ -1114,6 +1116,143 @@
 }
 
 .masters-edit > .cabinet-about {
+  margin-top: 85px; /* Figma ~100 */
+}
+
+/* —— Master edit — Figma Group 33 / 3035:25843 —— */
+
+.master-edit {
+  width: 100%;
+  min-width: 0;
+}
+
+.master-edit__rules {
+  box-sizing: border-box;
+  padding: 20px; /* Figma 24 */
+  border: 2px dashed var(--color-primary-500);
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-70);
+}
+
+.master-edit__rules-title {
+  margin: 0;
+  color: var(--color-primary-900);
+  font-family: var(--font-sans);
+  font-size: 20px; /* Figma 24 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.master-edit__rules-text {
+  margin-top: 14px; /* Figma 16 */
+  color: var(--color-primary-500);
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.master-edit__rules-text p {
+  margin: 0;
+}
+
+.master-edit__rules-text p + p {
+  margin-top: 0.15em;
+}
+
+.master-edit__form {
+  margin-top: 48px; /* Figma ~56 tip → form */
+}
+
+.master-edit__section + .master-edit__section {
+  margin-top: 48px; /* Figma ~56 */
+}
+
+.master-edit__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 136px; /* Figma 160 */
+  row-gap: 14px;
+  margin-top: 14px; /* Figma 16 */
+  align-items: start;
+}
+
+.master-edit__col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* Figma 16 */
+  min-width: 0;
+}
+
+.cabinet-field__select-wrap {
+  position: relative;
+  display: block;
+}
+
+.cabinet-field__select {
+  appearance: none;
+  padding-right: 44px;
+  cursor: pointer;
+}
+
+.cabinet-field__select-wrap::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 17px;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  background: url("../images/icon-chevron-dark.svg") center / 20px 20px no-repeat;
+  transform: rotate(90deg);
+  pointer-events: none;
+}
+
+.master-edit__audience {
+  margin-top: 14px;
+  grid-template-columns: repeat(3, minmax(0, 264px));
+}
+
+.master-edit__note {
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 20px; /* Figma 24 */
+  border: 2px dashed var(--color-primary-500);
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-70);
+}
+
+.master-edit__note-title {
+  margin: 0;
+  color: var(--color-primary-900);
+  font-family: var(--font-sans);
+  font-size: 20px; /* Figma 24 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.master-edit__note-text {
+  margin-top: 14px;
+  color: var(--color-primary-500);
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.master-edit__note-text p {
+  margin: 0;
+}
+
+.master-edit__note-text p + p {
+  margin-top: 0.35em;
+}
+
+.master-edit__media-grid {
+  margin-top: 28px; /* Figma ~32 */
+}
+
+.master-edit > .cabinet-about {
   margin-top: 85px; /* Figma ~100 */
 }
 
@@ -1336,6 +1475,14 @@ body.is-photos-modal-open {
   .masters-edit > .cabinet-about {
     margin-top: 56px;
   }
+
+  .master-edit__grid {
+    column-gap: 48px;
+  }
+
+  .master-edit__audience {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 1099px) {
@@ -1375,6 +1522,11 @@ body.is-photos-modal-open {
 
   .masters-edit__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .master-edit__grid {
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 0;
   }
 }
 
@@ -1897,6 +2049,108 @@ body.is-photos-modal-open {
   .masters-edit > .cabinet-about .cabinet-about__body {
     margin-top: 16px;
     font-size: 16px;
+  }
+
+  /* Master edit — Figma Group 34 / 3036:25879 (~1:1) */
+  .master-edit__rules {
+    padding: 16px; /* Figma */
+  }
+
+  .master-edit__rules-title,
+  .master-edit__note-title {
+    font-size: 18px; /* Figma */
+  }
+
+  .master-edit__rules-text,
+  .master-edit__note-text {
+    margin-top: 10px; /* Figma title → text ~10 */
+    font-size: 14px; /* Figma */
+  }
+
+  .master-edit__form {
+    margin-top: 40px; /* Figma rules → form */
+  }
+
+  .master-edit__section + .master-edit__section {
+    margin-top: 40px; /* Figma section gaps */
+  }
+
+  .master-edit .description-form__heading {
+    font-size: 24px; /* Figma */
+  }
+
+  .master-edit .description-form__text-head {
+    margin-bottom: 16px; /* Figma head → content */
+  }
+
+  .master-edit .description-form__hint {
+    margin-top: 4px;
+    font-size: 14px; /* Figma photo/video counters */
+  }
+
+  .master-edit__section[aria-labelledby="master-desc-title"] .description-form__hint {
+    font-size: 16px; /* Figma description hint */
+  }
+
+  .master-edit__grid {
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 0;
+    row-gap: 16px; /* Figma field stack */
+    margin-top: 16px;
+  }
+
+  .master-edit__col {
+    gap: 16px;
+  }
+
+  .master-edit__audience {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px; /* Figma chip stack */
+    margin-top: 16px;
+  }
+
+  .master-edit .description-form__textarea {
+    min-height: 404px; /* Figma ~465 inner ≈ content */
+    padding: 20px;
+    font-size: 20px; /* Figma */
+  }
+
+  .master-edit__note {
+    margin-top: 0; /* text-head already 16 */
+    padding: 16px;
+  }
+
+  .master-edit__media-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px; /* Figma itemSpacing */
+    margin-top: 16px; /* Figma note → grid */
+  }
+
+  .master-edit .photos-edit__item--add-start,
+  .master-edit .video-edit__item--add-start {
+    display: block;
+  }
+
+  .master-edit .description-form__actions {
+    margin-top: 40px;
+  }
+
+  .master-edit > .cabinet-about {
+    margin-top: 80px; /* Figma video → about */
+    padding: 20px;
+  }
+
+  .master-edit > .cabinet-about .cabinet-about__title {
+    font-size: 32px; /* Figma Tenor */
+  }
+
+  .master-edit > .cabinet-about .cabinet-about__body {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+
+  .master-edit > .cabinet-about .cabinet-about__body p + p {
+    margin-top: 0.85em;
   }
 
   /* Upload modal — Figma 1080:22946 (~1:1) */
