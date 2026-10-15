@@ -1256,6 +1256,376 @@
   margin-top: 85px; /* Figma ~100 */
 }
 
+/* —— Reviews — Figma Group 37 / 3038:25995 —— */
+
+.reviews-edit {
+  width: 100%;
+  min-width: 0;
+}
+
+.reviews-edit__count {
+  margin: 0;
+  color: #e73d45;
+  font-family: var(--font-sans);
+  font-size: 14px; /* Figma 16 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.reviews-edit__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Figma 24 */
+  margin-top: 34px; /* Figma ~40 count → list */
+}
+
+.cabinet-review {
+  display: flex;
+  align-items: flex-start;
+  gap: 34px; /* Figma 40 */
+  box-sizing: border-box;
+  padding: 17px 0; /* Figma 20 */
+  border-bottom: 1px solid var(--color-primary-150); /* #d8bcbc */
+}
+
+.cabinet-review__meta {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 10px; /* Figma 12 */
+  width: 336px; /* Figma 395 */
+}
+
+.cabinet-review__like {
+  display: block;
+  width: 48px; /* Figma 56 */
+  height: 48px;
+}
+
+.cabinet-review__author {
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 20px; /* Figma 24 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.cabinet-review__date {
+  color: var(--color-neutral-400); /* #817979 */
+  font-family: var(--font-sans);
+  font-size: 14px; /* Figma 16 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.cabinet-review__main {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 20px; /* Figma ~24 content → actions */
+  min-width: 0;
+}
+
+.cabinet-review__content {
+  display: flex;
+  flex-direction: column;
+  gap: 34px; /* Figma 40 text → answer */
+  min-width: 0;
+}
+
+.cabinet-review__text {
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 14px; /* Figma 16 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.cabinet-review__answer,
+.cabinet-review__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Figma ~12 title → text */
+  min-width: 0;
+}
+
+.cabinet-review__form {
+  gap: 20px; /* Figma 24 title → field → buttons */
+}
+
+.cabinet-review__answer-title {
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 20px; /* Figma 24 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.cabinet-review__form .cabinet-review__answer-title {
+  color: var(--color-primary-900); /* #260a0a — Figma editing */
+}
+
+.cabinet-review__answer-text {
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 14px; /* Figma 16 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.cabinet-review__textarea {
+  height: auto;
+  min-height: 170px; /* Figma 200 */
+  padding: 17px; /* Figma 20 */
+  resize: vertical;
+}
+
+.cabinet-review__form-actions,
+.cabinet-review__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px; /* Figma 16 */
+}
+
+.cabinet-review__actions {
+  justify-content: flex-end;
+}
+
+.cabinet-review__btn {
+  height: 54px; /* Figma 64 */
+  padding: 0 27px; /* Figma 32 */
+  font-size: 17px; /* Figma 20 */
+}
+
+.cabinet-review__btn img {
+  width: 17px; /* Figma 20 */
+  height: 17px;
+}
+
+.reviews-edit > .cabinet-about {
+  margin-top: 85px; /* Figma ~100 */
+}
+
+.reviews-edit > .cabinet-about .cabinet-about__body {
+  margin-top: 14px; /* Figma 16 */
+}
+
+/* —— Programs — Figma Group 35 / 3036:25913 —— */
+
+.programs-edit {
+  width: 100%;
+  min-width: 0;
+}
+
+.programs-edit__count {
+  margin: 0;
+  color: #e73d45;
+  font-family: var(--font-sans);
+  font-size: 14px; /* Figma 16 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.programs-edit__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* Figma 16 */
+  margin-top: 27px; /* Figma ~32 count → list */
+}
+
+.program-card {
+  box-sizing: border-box;
+  padding: 20px; /* Figma 24 */
+  border-radius: 14px; /* Figma 16 */
+  background-color: var(--color-neutral-0);
+}
+
+.program-card__head {
+  display: flex;
+  align-items: center;
+  gap: 17px; /* Figma 20 */
+  min-width: 0;
+}
+
+.program-card__toggle {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.program-card__title {
+  flex: 1 1 auto;
+  min-width: 0;
+  color: var(--color-neutral-950); /* #0a0909 */
+  font-family: var(--font-sans);
+  font-size: 22px; /* Figma 26 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.program-card__icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.program-card__icon img {
+  position: absolute;
+  inset: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.program-card__icon-minus {
+  opacity: 0;
+}
+
+.program-card.is-open .program-card__icon-plus {
+  opacity: 0;
+}
+
+.program-card.is-open .program-card__icon-minus {
+  opacity: 1;
+}
+
+.program-card__remove,
+.program-card__price-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px; /* Figma 40 */
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 56px;
+  background-color: var(--color-primary-70); /* #eadcdc */
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.program-card__remove img,
+.program-card__price-remove img {
+  display: block;
+  width: 27px; /* Figma 32 scaled */
+  height: 27px;
+}
+
+.program-card__remove:hover,
+.program-card__price-remove:hover {
+  opacity: 0.8;
+}
+
+.program-card__remove:focus-visible,
+.program-card__price-remove:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+.program-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 27px; /* Figma 32 */
+  margin-top: 27px; /* Figma 32 */
+}
+
+.program-card__body[hidden] {
+  display: none;
+}
+
+.program-card .cabinet-field__input {
+  border: 1px solid var(--color-neutral-200); /* #c8c5c5 */
+}
+
+.program-card__textarea {
+  height: auto;
+  min-height: 116px; /* Figma 136 */
+  padding: 17px; /* Figma 20 */
+  resize: vertical;
+}
+
+.program-card__audience-title {
+  margin: 0;
+  color: var(--color-primary-900); /* #260a0a */
+  font-family: var(--font-sans);
+  font-size: 17px; /* Figma 20 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.program-card__chips {
+  grid-template-columns: repeat(3, minmax(0, 264px)); /* Figma ~310 */
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.program-card__price-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  gap: 41px; /* Figma 48 */
+  align-items: end;
+}
+
+.program-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px; /* Figma 16 */
+}
+
+.program-card__btn {
+  height: 54px; /* Figma 64 */
+  padding: 0 27px; /* Figma 32 */
+  font-size: 17px; /* Figma 20 */
+}
+
+.programs-edit__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 48px; /* Figma ~56 list → footer */
+  padding-top: 27px; /* Figma 32 */
+  border-top: 1px solid var(--color-neutral-200);
+}
+
+.programs-edit__add,
+.programs-edit__save {
+  height: 54px; /* Figma 64 */
+  padding: 0 27px;
+  font-size: 17px;
+}
+
+.programs-edit__add img {
+  width: 20px; /* Figma 24 scaled */
+  height: 20px;
+}
+
+.programs-edit > .cabinet-about {
+  margin-top: 85px; /* Figma ~100 */
+}
+
+.programs-edit > .cabinet-about .cabinet-about__note {
+  margin-top: 14px; /* Figma 16 title → note */
+}
+
+.programs-edit > .cabinet-about .cabinet-about__body--follow {
+  margin-top: 14px; /* Figma 16 note → body */
+}
+
 /* —— Upload modal — Figma 929:19860 —— */
 
 .photos-modal {
@@ -1483,6 +1853,18 @@ body.is-photos-modal-open {
   .master-edit__audience {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .cabinet-review__meta {
+    width: 240px;
+  }
+
+  .program-card__chips {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .program-card__price-row {
+    gap: 20px;
+  }
 }
 
 @media (max-width: 1099px) {
@@ -1527,6 +1909,38 @@ body.is-photos-modal-open {
   .master-edit__grid {
     grid-template-columns: minmax(0, 1fr);
     column-gap: 0;
+  }
+
+  .cabinet-review {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cabinet-review__meta {
+    width: 100%;
+  }
+
+  .cabinet-review__actions {
+    justify-content: flex-start;
+  }
+
+  .program-card__chips {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .program-card__price-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+    gap: 12px;
+  }
+
+  .programs-edit__footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .programs-edit__add,
+  .programs-edit__save {
+    width: 100%;
   }
 }
 
@@ -2228,5 +2642,246 @@ body.is-photos-modal-open {
     height: 48px; /* Figma */
     padding: 0 16px;
     font-size: 14px; /* Figma */
+  }
+
+  /* Programs — Figma Group 36 / 3037:25954 (~1:1) */
+  .programs-edit__count {
+    font-size: 14px; /* Figma */
+  }
+
+  .programs-edit__list {
+    gap: 12px; /* Figma collapsed stack; open→next 16 close enough */
+    margin-top: 20px; /* Figma count → list */
+  }
+
+  .program-card {
+    padding: 20px 16px; /* Figma */
+    border-radius: 16px;
+  }
+
+  .program-card__head {
+    gap: 12px;
+  }
+
+  .program-card__toggle {
+    gap: 12px;
+  }
+
+  .program-card__title {
+    font-size: 24px; /* Figma */
+  }
+
+  .program-card__remove,
+  .program-card__price-remove {
+    width: 40px; /* Figma */
+    height: 40px;
+  }
+
+  .program-card__remove img,
+  .program-card__price-remove img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .program-card__body {
+    gap: 20px; /* Figma field stack */
+    margin-top: 20px; /* Figma head → fields */
+  }
+
+  .program-card .cabinet-field__label {
+    font-size: 14px;
+  }
+
+  .program-card .cabinet-field__input {
+    height: 60px; /* Figma */
+    padding: 0 16px;
+    font-size: 18px; /* Figma */
+  }
+
+  .program-card__textarea {
+    min-height: 62px; /* Figma desc field */
+    padding: 16px;
+    font-size: 18px;
+  }
+
+  .program-card__audience-title {
+    font-size: 20px; /* Figma */
+  }
+
+  .program-card__chips {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px; /* Figma chip stack */
+    margin-top: 16px;
+  }
+
+  .program-card__price-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+    gap: 8px; /* Figma */
+    align-items: end;
+  }
+
+  .program-card__price-remove {
+    margin-bottom: 10px; /* align with 60px input center */
+    justify-self: end;
+  }
+
+  .program-card__actions {
+    flex-direction: column;
+    gap: 16px; /* Figma */
+  }
+
+  .program-card__btn {
+    width: 100%;
+    height: 48px; /* Figma */
+    padding: 0 16px;
+    font-size: 14px; /* Figma */
+  }
+
+  .programs-edit__footer {
+    margin-top: 40px; /* Figma list → footer */
+    padding-top: 16px; /* Figma ~17 */
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .programs-edit__add,
+  .programs-edit__save {
+    width: 100%;
+    height: 48px; /* Figma */
+    padding: 0 16px;
+    font-size: 14px; /* Figma */
+  }
+
+  .programs-edit__add img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .programs-edit > .cabinet-about {
+    margin-top: 80px; /* Figma footer → about */
+    padding: 20px;
+  }
+
+  .programs-edit > .cabinet-about .cabinet-about__title {
+    font-size: 32px; /* Figma Tenor */
+  }
+
+  .programs-edit > .cabinet-about .cabinet-about__note {
+    margin-top: 16px; /* Figma */
+    padding: 16px;
+    font-size: 16px; /* Figma */
+  }
+
+  .programs-edit > .cabinet-about .cabinet-about__body--follow {
+    margin-top: 16px; /* Figma */
+    font-size: 16px; /* Figma */
+  }
+
+  /* Reviews — mobile Group 38 / 3039:26052 */
+  .reviews-edit__count {
+    font-size: 14px; /* Figma */
+  }
+
+  .reviews-edit__list {
+    gap: 24px; /* Figma card → card */
+    margin-top: 20px; /* Figma count → list */
+  }
+
+  .cabinet-review {
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 0; /* Figma */
+  }
+
+  .cabinet-review__meta {
+    width: 100%;
+    gap: 8px; /* Figma */
+    padding-bottom: 8px; /* Figma meta → text */
+  }
+
+  .cabinet-review__like {
+    width: 32px; /* Figma */
+    height: 32px;
+  }
+
+  .cabinet-review__author {
+    font-size: 20px; /* Figma */
+  }
+
+  .cabinet-review__date {
+    font-size: 16px; /* Figma */
+  }
+
+  .cabinet-review__main {
+    gap: 40px; /* Figma content → actions */
+  }
+
+  .cabinet-review__content {
+    gap: 32px; /* Figma text → answer/form */
+  }
+
+  .cabinet-review__text,
+  .cabinet-review__answer-text {
+    font-size: 16px; /* Figma */
+  }
+
+  .cabinet-review__answer,
+  .cabinet-review__form {
+    gap: 12px; /* Figma */
+  }
+
+  .cabinet-review__answer-title {
+    font-size: 20px; /* Figma */
+  }
+
+  .cabinet-review__textarea {
+    min-height: 207px; /* Figma input */
+    padding: 16px; /* Figma */
+    font-size: 18px; /* Figma */
+  }
+
+  .cabinet-review__form-actions {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px; /* Figma Сохранить | Отмена */
+    padding-top: 8px; /* Figma */
+  }
+
+  .cabinet-review__form-actions .cabinet-review__btn {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .cabinet-review__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px; /* Figma */
+  }
+
+  .cabinet-review__btn {
+    width: 100%;
+    height: 48px; /* Figma */
+    padding: 0 16px; /* Figma */
+    font-size: 14px; /* Figma */
+  }
+
+  .cabinet-review__btn img {
+    width: 16px; /* Figma edit icon */
+    height: 16px;
+  }
+
+  .reviews-edit > .cabinet-about {
+    margin-top: 80px; /* Figma list → about */
+    padding: 20px; /* Figma */
+  }
+
+  .reviews-edit > .cabinet-about .cabinet-about__title {
+    font-size: 32px; /* Figma */
+  }
+
+  .reviews-edit > .cabinet-about .cabinet-about__body {
+    margin-top: 16px; /* Figma */
+    font-size: 16px; /* Figma */
   }
 }
