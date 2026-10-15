@@ -1413,6 +1413,258 @@
   margin-top: 14px; /* Figma 16 */
 }
 
+/* —— Vacancies — Figma Group 39 / 3040:26077 —— */
+
+.vacancies-edit {
+  width: 100%;
+  min-width: 0;
+}
+
+.vacancy-card {
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-md); /* 20 */
+  background-color: var(--color-neutral-0);
+}
+
+.vacancy-card__top {
+  display: flex;
+  align-items: stretch;
+  gap: 20px; /* Figma 24 */
+}
+
+.vacancy-card__photo {
+  flex-shrink: 0;
+  width: 458px; /* Figma 539 */
+  overflow: hidden;
+  background-color: var(--color-neutral-100);
+}
+
+.vacancy-card__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 350px; /* Figma 412 */
+  object-fit: cover;
+}
+
+.vacancy-card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 27px; /* Figma 32 */
+  min-width: 0;
+  padding: 27px; /* Figma 32 */
+}
+
+.vacancy-card__head {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Figma 12 */
+  min-width: 0;
+}
+
+.vacancy-card__title {
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 27px; /* Figma 32 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.vacancy-card__verified {
+  flex-shrink: 0;
+  width: 27px; /* Figma 32 */
+  height: 27px;
+}
+
+.vacancy-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* Figma 16 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vacancy-card__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 7px; /* Figma 8 */
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.vacancy-card__meta-item img {
+  flex-shrink: 0;
+  width: 17px; /* Figma 20 */
+  height: 17px;
+}
+
+.vacancy-card__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Figma 24 */
+  padding: 27px; /* Figma 32 */
+}
+
+.vacancy-card__desc {
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 400;
+  line-height: 1.4;
+  white-space: pre-line;
+}
+
+.vacancy-card__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Figma 12 */
+}
+
+.vacancy-card__divider {
+  width: 100%;
+  height: 0;
+  border: 0;
+  border-top: 1px solid var(--color-neutral-200); /* #c8c5c5 */
+}
+
+.vacancy-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 14px; /* Figma 16 */
+}
+
+.vacancy-card__btn {
+  height: 54px; /* Figma 64 */
+  padding: 0 27px; /* Figma 32 */
+  font-size: 17px; /* Figma 20 */
+}
+
+.vacancy-card__btn img {
+  width: 17px; /* Figma 20 */
+  height: 17px;
+}
+
+.vacancies-edit > .cabinet-about {
+  margin-top: 85px; /* Figma ~100 */
+}
+
+.vacancies-edit > .cabinet-about .cabinet-about__body {
+  margin-top: 14px; /* Figma 16 */
+}
+
+/* —— Vacancy edit — Figma Group 41 / 3041:26133 —— */
+
+.vacancy-edit {
+  width: 100%;
+  min-width: 0;
+}
+
+.vacancy-edit__form {
+  width: 100%;
+  min-width: 0;
+}
+
+.vacancy-edit__section {
+  margin: 0;
+}
+
+.vacancy-edit__section + .vacancy-edit__section {
+  margin-top: 48px; /* Figma 56 */
+}
+
+.vacancy-edit__section .description-form__heading {
+  margin-bottom: 14px; /* Figma title → fields 50−34 = 16 */
+}
+
+.vacancy-edit__grid {
+  display: grid;
+  gap: 34px; /* Figma 40 */
+  width: 100%;
+  min-width: 0;
+}
+
+.vacancy-edit__grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.vacancy-edit__grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.vacancy-edit__grid .cabinet-field {
+  width: 100%;
+  min-width: 0;
+}
+
+.vacancy-edit__textarea-wrap {
+  position: relative;
+  margin-top: 6px; /* Figma title → input ~24 total with heading mb */
+}
+
+.vacancy-edit__section .vacancy-edit__textarea-wrap {
+  margin-top: 0;
+}
+
+.vacancy-edit__textarea {
+  display: block;
+  width: 100%;
+  min-height: 177px; /* Figma 208 */
+  height: auto;
+  padding: 17px; /* Figma 20 */
+  padding-bottom: 36px;
+  resize: vertical;
+  white-space: pre-wrap;
+}
+
+.vacancy-edit__counter {
+  position: absolute;
+  right: 17px; /* Figma 20 */
+  bottom: 14px;
+  margin: 0;
+  color: var(--color-neutral-300); /* #989292 */
+  font-family: var(--font-sans);
+  font-size: 11px; /* Figma 13 */
+  font-weight: 600;
+  line-height: 1.4;
+  pointer-events: none;
+}
+
+.vacancy-edit__checks {
+  margin-top: 15px; /* Figma 18 */
+}
+
+.vacancy-edit__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 48px; /* Figma 56 */
+  padding-top: 28px; /* Figma ~33 */
+  border-top: 1px solid var(--color-neutral-200); /* #c8c5c5 */
+}
+
+.vacancy-edit__save {
+  height: 54px; /* Figma 64 */
+  padding: 0 27px; /* Figma 32 */
+  font-size: 17px; /* Figma 20 */
+}
+
+.vacancy-edit > .cabinet-about {
+  margin-top: 85px; /* Figma ~100 */
+}
+
+.vacancy-edit > .cabinet-about .cabinet-about__body {
+  margin-top: 14px; /* Figma 16 */
+}
+
 /* —— Programs — Figma Group 35 / 3036:25913 —— */
 
 .programs-edit {
@@ -1858,6 +2110,14 @@ body.is-photos-modal-open {
     width: 240px;
   }
 
+  .vacancy-card__photo {
+    width: 360px;
+  }
+
+  .vacancy-edit__grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .program-card__chips {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1922,6 +2182,25 @@ body.is-photos-modal-open {
 
   .cabinet-review__actions {
     justify-content: flex-start;
+  }
+
+  .vacancy-card__top {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .vacancy-card__photo {
+    width: 100%;
+  }
+
+  .vacancy-card__photo img {
+    min-height: 240px;
+  }
+
+  .vacancy-edit__grid--3,
+  .vacancy-edit__grid--2 {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
   }
 
   .program-card__chips {
@@ -2883,5 +3162,177 @@ body.is-photos-modal-open {
   .reviews-edit > .cabinet-about .cabinet-about__body {
     margin-top: 16px; /* Figma */
     font-size: 16px; /* Figma */
+  }
+
+  /* Vacancies — mobile Group 40 / 3041:26121 */
+  .vacancy-card__top {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .vacancy-card__photo {
+    width: 100%;
+    aspect-ratio: 349 / 267; /* Figma photo */
+  }
+
+  .vacancy-card__photo img {
+    min-height: 0;
+  }
+
+  .vacancy-card__content {
+    gap: 16px; /* Figma title → meta */
+    padding: 20px 16px; /* Figma */
+  }
+
+  .vacancy-card__head {
+    gap: 12px; /* Figma */
+  }
+
+  .vacancy-card__title {
+    font-size: 24px; /* Figma */
+  }
+
+  .vacancy-card__verified {
+    width: 32px; /* Figma */
+    height: 32px;
+  }
+
+  .vacancy-card__meta {
+    gap: 16px; /* Figma */
+  }
+
+  .vacancy-card__meta-item {
+    gap: 8px; /* Figma */
+    align-items: flex-start;
+    font-size: 16px; /* Figma */
+  }
+
+  .vacancy-card__meta-item img {
+    width: 20px; /* Figma */
+    height: 20px;
+    margin-top: 1px;
+  }
+
+  .vacancy-card__bottom {
+    gap: 24px; /* Figma */
+    padding: 20px 16px; /* Figma */
+  }
+
+  .vacancy-card__desc {
+    font-size: 16px; /* Figma */
+  }
+
+  .vacancy-card__contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 8px; /* Figma row 12 / col 8 */
+  }
+
+  .vacancy-card__contacts .vacancy-card__btn:first-child {
+    grid-column: 1 / -1; /* Позвонить full width */
+  }
+
+  .vacancy-card__actions {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    gap: 8px; /* Figma */
+  }
+
+  .vacancy-card__actions .vacancy-card__btn {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .vacancy-card__btn {
+    width: 100%;
+    height: 48px; /* Figma */
+    padding: 0 16px; /* Figma */
+    font-size: 14px; /* Figma */
+  }
+
+  .vacancy-card__btn img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .vacancies-edit > .cabinet-about {
+    margin-top: 80px; /* Figma card → about */
+    padding: 20px; /* Figma */
+  }
+
+  .vacancies-edit > .cabinet-about .cabinet-about__title {
+    font-size: 32px; /* Figma */
+  }
+
+  .vacancies-edit > .cabinet-about .cabinet-about__body {
+    margin-top: 16px; /* Figma */
+    font-size: 16px; /* Figma */
+  }
+
+  /* Vacancy edit — mobile Group 42 / 3042:26169 */
+  .vacancy-edit__section + .vacancy-edit__section {
+    margin-top: 40px; /* Figma section → section */
+  }
+
+  .vacancy-edit__section .description-form__heading {
+    margin-bottom: 16px; /* Figma title → fields */
+    font-size: 24px; /* Figma */
+  }
+
+  .vacancy-edit__grid--3 {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px; /* Figma field stack */
+  }
+
+  .vacancy-edit__grid--2 {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px; /* Figma phone → messenger */
+  }
+
+  .vacancy-edit__textarea {
+    min-height: 332px; /* Figma */
+    padding: 16px; /* Figma */
+    padding-bottom: 40px;
+    font-size: 18px; /* Figma */
+  }
+
+  .vacancy-edit__counter {
+    right: 16px;
+    bottom: 16px;
+    font-size: 13px; /* Figma */
+  }
+
+  .vacancy-edit__checks {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px; /* Figma */
+    margin-top: 18px; /* Figma */
+  }
+
+  .vacancy-edit__actions {
+    margin-top: 54px; /* Figma form → save */
+    padding-top: 16px; /* Figma */
+  }
+
+  .vacancy-edit__save {
+    width: 100%;
+    height: 48px; /* Figma */
+    padding: 0 16px; /* Figma */
+    font-size: 14px; /* Figma */
+  }
+
+  .vacancy-edit > .cabinet-about {
+    margin-top: 80px; /* Figma save → about */
+    padding: 20px; /* Figma */
+  }
+
+  .vacancy-edit > .cabinet-about .cabinet-about__title {
+    font-size: 32px; /* Figma */
+  }
+
+  .vacancy-edit > .cabinet-about .cabinet-about__body {
+    margin-top: 16px; /* Figma */
+    font-size: 18px; /* Figma */
   }
 }
