@@ -7,7 +7,7 @@
   };
 
   function updateHScroll($wrap) {
-    var $scroll = $wrap.find(".stats-card__table-scroll");
+    var $scroll = $wrap.find(".stats-card__table-scroll, .stats-card__chart-scroll").first();
     var $bar = $wrap.find(".stats-card__hscroll");
     var $thumb = $bar.find(".stats-card__hscroll-thumb");
     var el = $scroll[0];
@@ -31,7 +31,7 @@
   }
 
   function updateCardHScroll($card) {
-    $card.find(".stats-card__table-wrap").each(function () {
+    $card.find(".stats-card__table-wrap, .stats-card__chart").each(function () {
       updateHScroll($(this));
     });
   }
@@ -63,7 +63,7 @@
     $btn.find("span").first().text(open ? labels.hide : labels.show);
     $reveal.attr("aria-hidden", open ? "false" : "true");
 
-    if (open && panel === "table") {
+    if (open) {
       window.requestAnimationFrame(function () {
         updateCardHScroll($card);
         window.setTimeout(function () {
@@ -97,12 +97,12 @@
       setPanel($card, panel, !$card.hasClass(openClass));
     });
 
-    $(".stats-card__table-scroll").on("scroll", function () {
-      updateHScroll($(this).closest(".stats-card__table-wrap"));
+    $(".stats-card__table-scroll, .stats-card__chart-scroll").on("scroll", function () {
+      updateHScroll($(this).closest(".stats-card__table-wrap, .stats-card__chart"));
     });
 
     $(window).on("resize", function () {
-      $(".stats-card.is-table-open").each(function () {
+      $(".stats-card.is-table-open, .stats-card.is-chart-open").each(function () {
         updateCardHScroll($(this));
       });
     });
