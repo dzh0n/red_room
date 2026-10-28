@@ -1,0 +1,343 @@
+/* Auth / login — Figma 1089:25749 desktop (~85%), 1089:25857 mobile (1:1) */
+
+.auth {
+  padding-top: 28px;
+  padding-bottom: var(--section-gap);
+}
+
+.auth__breadcrumbs {
+  margin-bottom: 34px; /* Figma ~40 */
+}
+
+.auth__card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 34px; /* Figma 40 */
+  width: 100%;
+  max-width: 702px; /* Figma 826 */
+  margin: 0 auto;
+  padding: 54px; /* Figma 64 */
+  border-radius: var(--radius-lg); /* 24 */
+  background-color: var(--color-neutral-50); /* #f7f6f6 */
+}
+
+.auth__title {
+  margin: 0;
+  color: var(--color-primary-950); /* #190707 */
+  font-family: var(--font-display);
+  font-size: 31px; /* Figma 36 */
+  font-weight: 400;
+  line-height: normal;
+}
+
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  gap: 34px; /* Figma 40 */
+  width: 100%;
+  min-width: 0;
+}
+
+.auth__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* Figma 16 */
+  width: 100%;
+  min-width: 0;
+}
+
+.auth__field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Figma 6 */
+  width: 100%;
+  min-width: 0;
+}
+
+.auth__label {
+  color: var(--color-neutral-400); /* #817979 */
+  font-family: var(--font-sans);
+  font-size: 14px; /* Figma 16 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.auth__input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 54px; /* Figma 64 */
+  padding: 0 17px; /* Figma 20 */
+  border: 1px solid var(--color-neutral-200); /* #c8c5c5 */
+  border-radius: var(--radius-sm); /* 12 */
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--color-neutral-900); /* #131212 */
+  font-family: var(--font-sans);
+  font-size: 17px; /* Figma 20 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.auth__input:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px var(--color-primary-400);
+}
+
+.auth__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 41px; /* Figma 48 */
+  padding-top: 27px; /* Figma 32 */
+  border-top: 1px solid var(--color-neutral-200); /* #c8c5c5 */
+}
+
+.auth__captcha {
+  display: block;
+  width: 256px; /* Figma 301 */
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px; /* Figma 4 */
+}
+
+.auth__submit {
+  flex-shrink: 0;
+  height: 54px; /* Figma 64 */
+  padding: 0 27px; /* Figma 32 */
+  font-size: 17px; /* Figma 20 */
+}
+
+/* Register — Figma 1088:25932 desktop (~85%) */
+.auth__agree {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px; /* Figma 12 */
+  width: 100%;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.auth__agree-box {
+  appearance: none;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 17px; /* Figma 20 */
+  height: 17px;
+  margin: 2px 0 0;
+  border: 1px solid var(--color-neutral-950);
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.auth__agree-box:checked {
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-700);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='2' d='M2 6l3 3 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+}
+
+.auth__agree-box:focus-visible {
+  outline: 2px solid var(--color-primary-400);
+  outline-offset: 2px;
+}
+
+.auth__agree-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.auth__agree-link {
+  color: var(--color-primary-500);
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.auth__agree-link:hover,
+.auth__agree-link:focus-visible {
+  color: var(--color-primary-700);
+  outline: none;
+}
+
+.auth__note {
+  display: none; /* mobile-only in Figma 1088:26425 */
+  margin: 0;
+  width: 100%;
+  color: var(--color-neutral-600); /* #4e4646 */
+  font-family: var(--font-sans);
+  font-size: 14px; /* Figma 16 mobile */
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.auth__hint {
+  margin: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.auth__hint-link {
+  color: var(--color-primary-500);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth__hint-link:hover,
+.auth__hint-link:focus-visible {
+  color: var(--color-primary-700);
+  outline: none;
+}
+
+.auth--register .auth__submit {
+  min-width: 229px; /* Figma 269 */
+}
+
+@media (max-width: 767px) {
+  /* Mobile 1089:25857 — 1:1, no card chrome; outer itemSpacing 24 */
+  .auth {
+    padding-top: 20px;
+  }
+
+  .auth__breadcrumbs {
+    margin-bottom: 16px;
+  }
+
+  .auth__card {
+    max-width: none;
+    gap: 24px; /* title → fields */
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .auth__title {
+    font-size: 32px; /* Tenor 1:1 */
+    line-height: normal;
+  }
+
+  .auth__form {
+    gap: 24px; /* fields → actions */
+  }
+
+  .auth__fields {
+    gap: 16px; /* Figma itemSpacing */
+  }
+
+  .auth__field {
+    gap: 6px; /* Figma itemSpacing */
+  }
+
+  .auth__label {
+    font-size: 14px;
+  }
+
+  .auth__input {
+    height: 60px;
+    padding: 0 16px;
+    border-radius: 12px;
+    font-size: 18px;
+  }
+
+  .auth__input::placeholder {
+    color: var(--color-neutral-500); /* #615858 */
+  }
+
+  .auth__actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px; /* Figma itemSpacing */
+    padding-top: 32px;
+  }
+
+  .auth__captcha {
+    width: 301px;
+    max-width: 100%;
+    border-radius: 4px;
+  }
+
+  .auth__submit {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+  /* Register mobile — Figma 1088:26425 (1:1) */
+  .auth--register .auth__card {
+    gap: 24px;
+  }
+
+  .auth--register .auth__form {
+    gap: 24px; /* title/fields/check/actions rhythm */
+  }
+
+  .auth__agree {
+    gap: 12px; /* Figma itemSpacing */
+    width: 100%;
+  }
+
+  .auth__agree-box {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+  }
+
+  .auth__agree-text {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .auth__agree-link {
+    color: inherit;
+    font-weight: 400;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .auth__note {
+    display: block;
+    color: var(--color-neutral-600); /* #4e4646 */
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .auth__hint {
+    display: none; /* not in 1088:26425 */
+  }
+
+  .auth--register .auth__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    padding-top: 32px;
+    border-top: 1px solid var(--color-neutral-200);
+  }
+
+  .auth--register .auth__captcha {
+    align-self: center;
+    width: 301px;
+    max-width: 100%;
+  }
+
+  .auth--register .auth__submit {
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+    font-size: 14px;
+  }
+}

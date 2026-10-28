@@ -1,0 +1,382 @@
+/* Salon add form — Figma 1088:25906 desktop (~85%), 1088:26300 mobile (1:1) */
+
+.salon-add {
+  padding-top: 28px;
+  padding-bottom: var(--section-gap);
+}
+
+.salon-add__breadcrumbs {
+  margin-bottom: 34px;
+}
+
+.salon-add__card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 34px; /* Figma 40 */
+  width: 100%;
+  max-width: 1430px; /* Figma 1682 */
+  margin: 0 auto;
+  padding: 54px; /* Figma 64 */
+  border-radius: var(--radius-lg);
+  background-color: var(--color-neutral-50);
+}
+
+.salon-add__title {
+  margin: 0;
+  color: var(--color-primary-950);
+  font-family: var(--font-display);
+  font-size: 31px; /* Figma 36 */
+  font-weight: 400;
+  line-height: normal;
+}
+
+.salon-add__form {
+  display: flex;
+  flex-direction: column;
+  gap: 34px; /* Figma 40 */
+  width: 100%;
+  min-width: 0;
+}
+
+.salon-add__columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 54px; /* Figma 64 */
+  width: 100%;
+  min-width: 0;
+  align-items: start;
+}
+
+.salon-add__col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Figma 24 heading → fields */
+  min-width: 0;
+}
+
+.salon-add__heading {
+  margin: 0;
+  color: var(--color-primary-900); /* #260a0a */
+  font-family: var(--font-sans);
+  font-size: 20px; /* Figma 24 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-add__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* Figma 16 */
+  width: 100%;
+  min-width: 0;
+}
+
+.salon-add__field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Figma 6 */
+  width: 100%;
+  min-width: 0;
+}
+
+.salon-add__label {
+  color: var(--color-neutral-400);
+  font-family: var(--font-sans);
+  font-size: 14px; /* Figma 16 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.salon-add__input,
+.salon-add__select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 54px; /* Figma 64 */
+  padding: 0 17px; /* Figma 20 */
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--color-neutral-900);
+  font-family: var(--font-sans);
+  font-size: 17px; /* Figma 20 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.salon-add__input:focus,
+.salon-add__select:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px var(--color-primary-400);
+}
+
+.salon-add__select-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.salon-add__select {
+  appearance: none;
+  padding-right: 44px; /* room for 16px chevron + inset */
+  cursor: pointer;
+}
+
+.salon-add__select-wrap::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 17px; /* Figma 20 */
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  background: url("../../images/icon-chevron-down.svg") center / 16px 16px no-repeat;
+  pointer-events: none;
+}
+
+.salon-add__field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Figma email → hint */
+  width: 100%;
+  min-width: 0;
+}
+
+.salon-add__hint {
+  margin: 0;
+  color: var(--color-neutral-700); /* #3a3535 */
+  font-family: var(--font-sans);
+  font-size: 12px; /* Figma 14 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.salon-add__passwords {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 41px; /* Figma 48 */
+  width: 100%;
+  padding-top: 27px; /* Figma 32 */
+  border-top: 1px solid var(--color-neutral-200);
+}
+
+.salon-add__closing {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 41px; /* Figma 48 */
+  row-gap: 10px; /* Figma 12 */
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  padding-top: 27px; /* Figma 32 */
+  border-top: 1px solid var(--color-neutral-200);
+}
+
+.salon-add__agree {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px; /* Figma 12 */
+  width: 100%;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.salon-add__agree-box {
+  appearance: none;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 17px; /* Figma 20 */
+  height: 17px;
+  margin: 2px 0 0;
+  border: 1px solid var(--color-neutral-950);
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.salon-add__agree-box:checked {
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-700);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='2' d='M2 6l3 3 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+}
+
+.salon-add__agree-box:focus-visible {
+  outline: 2px solid var(--color-primary-400);
+  outline-offset: 2px;
+}
+
+.salon-add__agree-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  color: var(--color-neutral-950);
+  font-family: var(--font-sans);
+  font-size: 15px; /* Figma 18 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.salon-add__agree-link {
+  color: var(--color-primary-500);
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.salon-add__agree-link:hover,
+.salon-add__agree-link:focus-visible {
+  color: var(--color-primary-700);
+  outline: none;
+}
+
+.salon-add__footer {
+  display: contents;
+}
+
+.salon-add__note {
+  grid-column: 1;
+  grid-row: 2;
+  margin: 0;
+  color: var(--color-neutral-600); /* #4e4646 */
+  font-family: var(--font-sans);
+  font-size: 14px; /* Figma 16 */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.salon-add__submit {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  justify-self: end;
+  min-width: 229px; /* Figma 269 */
+  height: 54px; /* Figma 64 */
+  padding: 0 27px;
+  font-size: 17px; /* Figma 20 */
+}
+
+@media (max-width: 767px) {
+  /* Mobile 1088:26300 — 1:1, itemSpacing 24, no card chrome */
+  .salon-add {
+    padding-top: 20px;
+  }
+
+  .salon-add__breadcrumbs {
+    margin-bottom: 16px;
+  }
+
+  .salon-add__card {
+    max-width: none;
+    gap: 24px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .salon-add__title {
+    font-size: 32px;
+  }
+
+  .salon-add__form {
+    gap: 24px;
+  }
+
+  .salon-add__columns {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .salon-add__col {
+    gap: 20px;
+  }
+
+  .salon-add__heading {
+    font-size: 24px;
+  }
+
+  .salon-add__fields {
+    gap: 16px;
+  }
+
+  .salon-add__field {
+    gap: 6px;
+  }
+
+  .salon-add__label {
+    font-size: 14px;
+  }
+
+  .salon-add__input,
+  .salon-add__select {
+    height: 60px;
+    padding: 0 16px;
+    font-size: 18px;
+  }
+
+  .salon-add__select-wrap::after {
+    right: 16px;
+  }
+
+  .salon-add__hint {
+    font-size: 14px;
+  }
+
+  /* Passwords absent in mobile Figma frame */
+  .salon-add__passwords {
+    display: none;
+  }
+
+  /* Agree above bordered note+button block */
+  .salon-add__closing {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .salon-add__agree {
+    gap: 12px;
+  }
+
+  .salon-add__agree-box {
+    width: 20px;
+    height: 20px;
+    margin: 2px 0 0;
+  }
+
+  .salon-add__agree-text {
+    font-size: 18px;
+  }
+
+  .salon-add__agree-link {
+    color: inherit;
+  }
+
+  .salon-add__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+    padding-top: 32px;
+    border-top: 1px solid var(--color-neutral-200);
+  }
+
+  .salon-add__note {
+    font-size: 16px;
+  }
+
+  .salon-add__submit {
+    justify-self: stretch;
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+}
